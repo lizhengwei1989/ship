@@ -1,0 +1,591 @@
+<div class="uflow5_indexright_box" style="position:relative;">
+    <div class="right_div_head">
+        <a href="javascript:;">收货</a> &gt;
+        <a href="javascript:;">新建收货单</a>
+    </div>
+    <div class="uflow5_indexright" id="right_div">
+        <!-- 动作按钮条 -->
+        <div class="top_button clearfix">
+            <div class="w960 bc ">
+                <h3 class="fl">创建工单</h3>
+                <!-- 左侧按钮 -->
+                <p id="top_button_left" class="fl">
+                    <a href="javascript:void(0);" id="tb_96" title="新建页面增加收货人" class="gaip" ng-click="conbool()">快速保存客户</a>
+                    <!--  <a href="javascript:void(0);" id="tb_97" title="新建页面增加发货人" class="gaip">快速保存发货方</a> -->
+                </p>
+                <!-- 右侧按钮 -->
+                <p id="top_button_right" class="fr">
+                    <a href="javascript:void(0)" id="tb_submit" title="提交并打印" class="smit">提交并打印</a>
+                    <a href="javascript:void(0)" id="tb_submit" title="提交" class="smit">提交</a>
+                </p>
+                <!--收货方弹出框-->
+                <form name="form" ng-submit="save()" novalidate="novalidate">
+                    <div class="top_buttoncn" style="left: 67.0938px; float: left;display:none" >
+                        <div class="topformlist mb10 clearfix">
+                            <label for="receiving" class="editableLabel">收货方&nbsp;&nbsp;&nbsp;&nbsp;：</label>
+                            <input id="receiving" name="receiving" type="text" class="InpText f12" style="width: 246px;" ng-model="receiving" required>
+                            <span style="color:red;" ng-show="form.receiving.$dirty && form.receiving.$error.required">填写收货方</span>
+                        </div>
+                        <div class="topformlist mb10 clearfix">
+                            <label for="receivingPerson" class="editableLabel">接收人&nbsp;&nbsp;&nbsp;&nbsp;：</label>
+                            <input id="receivingPerson" name="receivingPerson" type="text" class="InpText f12" style="width: 246px;" ng-model="receivingPerson" required>
+                            <span style="color:red;" ng-show="form.receivingPerson.$dirty && form.receivingPerson.$error.required">填写正确接收人</span>
+                        </div>
+                        <div id="field_lineInput" class="topformlist mb10 clearfix uic_form_select" style="display: block;">
+                            <label class="authoritylab  editableLabel" for="lineInput">服务路线：</label>
+                            <div class="selectDiv" hidetype="false">
+                                <input name="lineInput" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" infinityid="">
+                                <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;"></a>
+                                <div class="uicSelectData" style="max-height:254px;width:256px">
+                                    <ul></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="field_userType" class="topformlist mb10 clearfix uic_form_select" style="display: block;">
+                            <label class="authoritylab  editableLabel" for="userType">客户类别：</label>
+                            <div class="selectDiv" hidetype="false">
+                                <input name="userType" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" infinityid="">
+                                <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;"></a>
+                                <div class="uicSelectData" style="max-height:254px;width:256px">
+                                    <ul>
+                                        <li infinityname="汽配店" infinityid="1">
+                                            <i>汽配店</i>
+                                        </li>
+                                        <li infinityname="汽修店" infinityid="2">
+                                            <i>汽修店</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="topformlist mb10 clearfix">
+                            <label for="receivingMobile" class="editableLabel">联系电话：</label>
+                            <input id="receivingMobile" name="receivingMobile" type="text" class="InpText f12" style="width: 246px;" ng-model="receivingMobile" required ng-pattern="/^1\d{10}$/">
+                            <span style="color:red;" ng-show="form.receivingMobile.$error.pattern">请输入正确的手机号</span>
+                        </div>
+                        <div class="topformlist mb10 clearfix">
+                            <label for="receivingAddress" class="editableLabel">联系地址：</label>
+                            <input id="receivingAddress" name="receivingAddress" type="text" class="InpText f12" maxlength="256" style="width: 246px;" ng-model="receivingAddress" required>
+                            <span style="color:red;" ng-show="form.receivingAddress.$dirty && form.receivingAddress.$error.required">填写地址</span>
+                        </div>
+                        <div class="tc mt10">
+                            <input type="submit" class="blue_btn33 mr5" value="确定">
+                            <input type="button" class="grey_btn33" value="取消" >
+                        </div>
+                    </div>
+                </form>
+                <!--收货方弹出框-->
+                <!--发货方弹出框-->
+                <!-- 发货方弹出框没有用到，可以先留着 -->
+                <!--收货方弹出框-->
+                <div style="left: 67.0938px; float: left;" ng-show="receive" class="top_buttoncn1">
+                    <div class="top_buttoncn2 clearfix">
+                        <div style="flaat:left;width:100%;height:50px;line-height:50px"><h3>客户信息</h3></div>
+                        <div class="topformlist1 mb10 clearfix">
+                            <label for="ClientKey" class="editableLabel"><span style="color: red;">*</span>客户编码：</label>
+                            <input id="ClientKey" name="ClientKey" type="text" class="InpText f12" maxlength="256" style="width: 200px;"  ng-focus="getKey()">
+                        </div>
+                        <div class="topformlist1 mb10 clearfix">
+                            <label for="receivingPerson1" class="editableLabel"><span style="color: red;">*</span>客户名称：</label>
+                            <input id="receivingPerson1" name="receivingPerson1" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                        <div class="topformlist1 mb10 clearfix">
+                            <label for="contacts" class="editableLabel"><span style="color: red;">*</span>联系人&nbsp;&nbsp;&nbsp;&nbsp;：</label>
+                            <input id="contacts" name="contacts" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                        <div class="topformlist1 mb10 clearfix">
+                            <label for="contactNumber" class="editableLabel"><span style="color: red;">*</span>联系电话：</label>
+                            <input id="contactNumber" name="contactNumber" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                         <div class="topformlist1 mb10 clearfix">
+                            <label for="alternativePhone1" class="editableLabel">备用电话1：</label>
+                            <input id="alternativePhone1" name="alternativePhone1" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                         <div class="topformlist1 mb10 clearfix">
+                            <label for="alternativePhone2" class="editableLabel">备用电话2：</label>
+                            <input id="alternativePhone2" name="alternativePhone2" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                        <div id="field_areaId" class="topformlist1 mb10 clearfix uic_form_tree" style="display: block;">
+                            <label class="authoritylab  editableLabel" for="areaId"><span style="color: red;">*</span>所在地区&nbsp;：</label>
+                            <div class="selectDiv">
+                                <!-- <input readonly="" name="areaId" value="" style="width:200px" class="authorityInp uicSelectInp">
+                                <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;"></a>
+                                <div class="uicSelectDataTree" style="width:200px"></div>
+                                <div style="display:none">
+                                    <ul class="hidden"></ul>
+                                </div> -->
+                                <select id="s_province" name="s_province" style="width:65px;height:30px"ng-model="s_province" ng-options="x.areaName for x in province"></select>
+                                <input type="hidden">  
+                                <select id="s_city" name="s_city" style="width:65px;height:30px" ng-model="s_city" ng-options="x.areaName for x in city"></select>  
+                                <select id="s_county" name="s_county" style="width:65px;height:30px" ng-model="s_county" ng-options="x.areaName for x in county"></select>
+                                <input type="hidden"value={{s_province.areaCode}} id="provinceId">
+                                <input type="hidden"value={{s_city.areaCode}} id="cityId">
+                                <input type="hidden"value={{s_county.areaCode}} id="countyId">
+
+                            </div>
+                        </div>
+                        <div class="topformlist1 mb10 clearfix">
+                            <label for="receivingAddress1" class="editableLabel"><span style="color: red;">*</span>详细地址&nbsp;：</label>
+                            <input id="receivingAddress1" name="receivingAddress1" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                        <div id="field_userType1" class="topformlist1 mb10 clearfix uic_form_select InpTextSucess" style="display: block;">
+                            <label class="authoritylab  editableLabel" for="userType1"><span style="color: red;">*</span>客户类型&nbsp;：</label>
+                            <div class="selectDiv">
+                                <input name="userType1" readonly="true" style="width:200px" class="authorityInp uicSelectInp" value="" infinityid="" id="userMold">
+                                <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;" ng-click="mold()"></a>
+                                <div class="uicSelectData" style="max-height:254px;width:200px" ng-show="moldbox" id="mold">
+                                    <input type="hidden" id="moldid">
+                                    <ul>
+                                        <li infinityname="汽配店" infinityid="1">
+                                            <i>汽配店</i>
+                                        </li>
+                                        <li infinityname="汽修店" infinityid="2">
+                                            <i>汽修店</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="field_lineInput1" class="topformlist1 mb10 clearfix uic_form_select" style="display: block;">
+                            <label class="authoritylab  editableLabel" for="lineInput1">服务路线&nbsp;&nbsp;&nbsp;：</label>
+                            <div class="selectDiv">
+                                <input name="lineInput1" readonly="true" style="width:200px" class="authorityInp uicSelectInp" value="" infinityid="" id="routeService">
+                                <input type="hidden" id="routeServiceId">
+                                <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;" ng-click="rsbtn()"></a>
+                                <div class="uicSelectData" id="rsbox" style="max-height:254px;width:200px" ng-show="rsBox">
+                                    <ul>
+                                        <li class="tip" ng-repeat="i in routeserveList">
+                                            <i ng-bind="i.lineName" ng-click="routeSerBtn(i)"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top_buttoncn3 clearfix">
+                        <div style="flaat:left;width:100%;height:50px;line-height:50px"><h3>账户信息</h3></div>
+                        <div class="topformlist1 mb10 clearfix">
+                            <label for="bankAccountNumber" class="editableLabel">银行账号：</label>
+                            <input id="bankAccountNumber" name="bankAccountNumber" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                        <div class="topformlist1 mb10 clearfix">
+                            <label for="bankAccountName" class="editableLabel">开户名称：</label>
+                            <input id="bankAccountName" name="bankAccountName" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                        <div id="field_bankKjtCode" class="topformlist1 mb10 clearfix uic_form_select" style="display: block;">
+                            <label class="authoritylab  editableLabel" for="bankKjtCode">开户银行：</label>
+                            <div class="selectDiv">
+                                <input name="bankKjtCode" readonly="true" style="width:200px" class="authorityInp uicSelectInp" value="" infinityid="" id="bank">
+                                <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;" ng-click="wbank()"></a>
+                                <div class="uicSelectData" style="max-height:254px;width:200px" id="bankBox" ng-show="bankbox">
+                                <input type="hidden" id="bankid">
+                                    <ul>
+                                        <li infinityname="工商银行" infinityid="ICBC">
+                                            <i>工商银行</i>
+                                        </li>
+                                        <li infinityname="农业银行" infinityid="ABC">
+                                            <i>农业银行</i>
+                                        </li>
+                                        <li infinityname="中国银行" infinityid="BOC">
+                                            <i>中国银行</i>
+                                        </li>
+                                        <li infinityname="建设银行" infinityid="CCB">
+                                            <i>建设银行</i>
+                                        </li>
+                                        <li infinityname="交通银行" infinityid="COMM">
+                                            <i>交通银行</i>
+                                        </li>
+                                        <li infinityname="中信银行" infinityid="CITIC">
+                                            <i>中信银行</i>
+                                        </li>
+                                        <li infinityname="光大银行" infinityid="CEB">
+                                            <i>光大银行</i>
+                                        </li>
+                                        <li infinityname="华夏银行" infinityid="HXB">
+                                            <i>华夏银行</i>
+                                        </li>
+                                        <li infinityname="民生银行" infinityid="CMBC">
+                                            <i>民生银行</i>
+                                        </li>
+                                        <li infinityname="广东发展银行" infinityid="GDB">
+                                            <i>广东发展银行</i>
+                                        </li>
+                                        <li infinityname="平安银行" infinityid="SZPAB">
+                                            <i>平安银行</i>
+                                        </li>
+                                        <li infinityname="招商银行" infinityid="CMB">
+                                            <i>招商银行</i>
+                                        </li>
+                                        <li infinityname="兴业银行" infinityid="CIB">
+                                            <i>兴业银行</i>
+                                        </li>
+                                        <li infinityname="浦东发展银行" infinityid="SPDB">
+                                            <i>浦东发展银行</i>
+                                        </li>
+                                        <li infinityname="中国邮储银行" infinityid="PSBC">
+                                            <i>中国邮储银行</i>
+                                        </li>
+                                        <li infinityname="北京银行" infinityid="BCCB">
+                                            <i>北京银行</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="topformlist1 mb10 clearfix">
+                            <label for="bankName" class="editableLabel">开户支行：</label>
+                            <input id="bankName" name="bankName" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                        <div class="topformlist1 mb10 clearfix">
+                            <label for="moneyPhone" class="editableLabel">打款手机：</label>
+                            <input id="moneyPhone" name="moneyPhone" type="text" class="InpText f12" maxlength="256" style="width: 200px;">
+                        </div>
+                    </div>
+
+                    <div class="top_buttoncn4 clearfix">
+                        <div class="tc mt10">
+                            <input type="button" class="blue_btn33 mr5" value="确定" ng-click="submit()">
+                            <input type="button" class="grey_btn33" value="取消" ng-click="cancel()">
+                        </div>
+                    </div>
+                </div>
+                <!--发货方弹出框-->
+            </div>
+        </div>
+        <!-- 流转路线条 -->
+        <!-- <div id="transitionContainer" class="top_button_nr "></div> -->
+        <!-- 中央布局 -->
+        <div class="center" style="top: 10px;">
+            <!--表单、底部按钮 -->
+            <div class="border01 bg_grey handprocess">
+                <!-- 表单 -->
+                <form id="uflowForm" novalidate="novalidate">
+                    <div class="handprocess_order" id="SheetDiv_基础信息" style="display: none;">
+                        <h3 class="pr">基础信息</h3>
+                        <div id="anchor_基础信息"></div>
+                        <ul class="clearfix" style="position: relative; z-index: 300;">
+                            <li id="field_station_id" class="li_form uic_form_select" style="width: 308px; display: none;">
+                                <label class="authoritylab  editableLabel" for="station_id">服务站：</label>
+                                <div class="selectDiv">
+                                    <input name="station_id" readonly="true" style="width:154px" class="authorityInp uicSelectInp" value="飞象速达" infinityid="16">
+                                    <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;"></a>
+                                    <div class="uicSelectData" style="max-height:254px;width:164px">
+                                        <ul>
+                                            <li class="licheck" infinityname="飞象速达" infinityid="16">
+                                                <i>飞象速达</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="handprocess_order" id="SheetDiv_收货方信息">
+                        <h3 class="pr">收货方信息</h3>
+                        <div id="anchor_收货方信息"></div>
+                        <ul class="clearfix" style="position: relative; z-index: 299;">
+                            <li id="field_receive_id" class="li_form uflow_searchtype" style="width: 308px; display: list-item;">
+                                <label class="authoritylab  editableLabel" for="receive_id">
+                                    <span style="color: red;">*</span>收货方：</label>
+                                <div class="searchtypeDiv selectDiv">
+                                    <input name="" class="searchtypeInp authorityInp uicSelectInp  required" style="width:154px" ng-focus="take()" ng-model="takeDetlis" id="searval">
+                                    <div class="searchtypeMore" ng-click="search()">
+                                        <!-- <a class="loading" href="javascript:void(0);" style="display: none;"></a> -->
+                                    </div>
+                                    <div class="uicSelectData" style="max-height: 254px; min-height: 25px; width: 164px;" ng-show="takeBox" id="box1">
+                                        <ul>
+                                            <li class="tip" ng-repeat="i in item">
+                                                <i ng-bind="i.clientName" ng-click="takeCon(i,0)"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pageDiv" style="left: 0px; height: 25px; width: 164px; top: 23px; display: none;">
+                                        <a class="prev disabled">&lt;</a>
+                                        <i class="page" style="width: 94px;">1 / 714</i>
+                                        <a class="next">&gt;</a></div>
+                                </div>
+                            </li>
+                            <li id="field_receive_person" class="li_form" style="width: 308px;">
+                                <label for="receive_person" class="editableLabel">
+                                    <span class="red">*</span>接收人：</label>
+                                <input id="receive_person" name="receive_person" type="text" class="InpText f12 required" maxlength="256" style="width: 154px;">
+                            </li>
+                            <li id="field_receive_telephone" class="li_form" style="width: 308px;">
+                                <label for="receive_telephone" class="editableLabel">
+                                    <span class="red">*</span>联系电话：</label>
+                                <input id="receive_telephone" name="receive_telephone" type="text" class="InpText f12 required" maxlength="256" style="width: 154px;">
+                            </li>
+                        </ul>
+                        <ul class="clearfix" style="position: relative; z-index: 298;">
+                            <li id="field_receive_address" class="li_form" style="width: 924px;">
+                                <label for="receive_address" class="editableLabel">
+                                    <span class="red">*</span>联系地址：</label>
+                                <input id="receive_address" name="receive_address" type="text" class="InpText f12 required" maxlength="256" style="width: 770px;">
+                            </li>
+                        </ul>
+                        <ul class="clearfix" style="position: relative; z-index: 297;">
+                            <li id="field_line_id" class="li_form uic_form_select" style="width: 308px; display: list-item;">
+                                <label class="authoritylab  editableLabel" for="line_id">
+                                    <span style="color: red;">*</span>线路：</label>
+                                <div class="selectDiv">
+                                    <input name="line_id" readonly="true" style="width:154px" class="authorityInp uicSelectInp  required" value="" infinityid="" ng-model="routeli">
+                                    <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;" ng-click="routelist()"></a>
+                                    <div class="uicSelectData" style="max-height:254px;width:164px" ng-show="routeBox" id="route">
+                                        <ul>
+                                            <li class="tip" ng-repeat="i in line">
+                                                <i ng-bind="i.lineName" ng-click="routeOn(i)">i.lineName</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="field_line_sn_id" class="li_form uic_form_select" style="width: 308px; display: list-item;">
+                                <label class="authoritylab  editableLabel" for="line_sn_id">
+                                    <span style="color: red;">*</span>班次：</label>
+                                <div class="selectDiv">
+                                    <input name="line_sn_id" readonly="true" style="width:154px" class="authorityInp uicSelectInp  required" value="" infinityid="" ng-model="runli">
+                                    <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;" ng-click="runlist()"></a>
+                                    <div class="uicSelectData" style="max-height:254px;width:164px" ng-show="runBox" id="run">
+                                        <ul>
+                                            <li class="tip" ng-repeat="i in run">
+                                                <i ng-bind="i.runTime" ng-click="runOn(i)"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="field_input_type" class="li_form uic_form_select" style="width: 308px; display: list-item;">
+                                <label class="authoritylab  editableLabel" for="input_type">
+                                    <span style="color: red;">*</span>收货方式：</label>
+                                <div class="selectDiv">
+                                    <input name="input_type" readonly="true" style="width:154px" class="authorityInp uicSelectInp  required" value="站点收货" infinityid="0" id="Receiving">
+                                    <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;" ng-click="reway()" ></a>
+                                    <div class="uicSelectData" style="max-height:254px;width:164px" id="reway" ng-show="blreway">
+                                        <ul>
+                                            <li class="licheck waylist" infinityname="站点收货" infinityid="0" >
+                                                <i>站点收货</i>
+                                            </li>
+                                            <li infinityname="班车回车" infinityid="1" class="waylist">
+                                                <i>班车回车</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="clearfix" style="position: relative; z-index: 296;">
+                            <li id="field_flow_station" class="li_form" style="width: 924px; display: none;">
+                                <label for="flow_station" class="editableLabel">流转站点：</label>
+                                <input id="flow_station" name="flow_station" type="text" class="InpText f12" maxlength="256" style="width: 770px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="handprocess_order" id="SheetDiv_发货方信息">
+                        <h3 class="pr">发货方信息</h3>
+                        <div id="anchor_发货方信息"></div>
+                        <ul class="clearfix" style="position: relative; z-index: 295;">
+                            <li id="field_consigner_id" class="li_form uflow_searchtype" style="width: 308px; display: list-item;">
+                                <label class="authoritylab  editableLabel" for="consigner_id">
+                                    <span style="color: red;">*</span>发货方：</label>
+                                <div class="searchtypeDiv selectDiv">
+                                    <input name="consigner_id" class="searchtypeInp authorityInp uicSelectInp  required" style="width:154px" value="" infinityid="" id="searval1" ng-model="takeDetlis1">
+                                    <div class="searchtypeMore" ng-click="searchfh()">
+                                        <!-- <a class="loading" href="javascript:void(0);" style="display: none;"></a> -->
+                                    </div>
+                                    <div class="uicSelectData" style="max-height: 254px; min-height: 25px; width: 770px;" id="box2" ng-show="shipments">
+                                       <!--  <ul>
+                                            <li infinityname=" 鑫源汽修" infinityid="13889" tiphtml="联系人: 常师傅<br></li>联系电话: 15517781536<br/>省份: 河南<br/>城市: 郑州市<br/>地区: 金水区<br/>地址:  博学路姚桥路交叉口向北100米路西" class="tip">
+                                                <i>
+                                    <b>
+                                    </b>鑫源汽修</i>
+                                            </li>
+                                            <li infinityname="兴泰汽车养护中心" infinityid="13890" tiphtml="联系人: 朱卫兵<br></li>联系电话: 15936914590<br/>省份: 河南<br/>城市: 郑州市<br/>地区: 金水区<br/>地址: 博学路文苑路向北5公里" class="tip">
+                                                <i>
+                                    <b>
+                                    </b>兴泰汽车养护中心</i>
+                                            </li>
+                                            <li infinityname="小邓汽修" infinityid="13892" tiphtml="联系人: 等老板<br></li>联系电话: 15837122757<br/>省份: 河南<br/>城市: 郑州市<br/>地区: 金水区<br/>地址: 博学路姚桥路向北300米路东" class="tip">
+                                                <i>
+                                    <b>
+                                    </b>小邓汽修</i>
+                                            </li>
+                                            <li infinityname="胜利汽修服务中心" infinityid="13894" tiphtml="联系人: 胡延胜<br></li>联系电话: 13633818352<br/>省份: 河南<br/>城市: 郑州市<br/>地区: 金水区<br/>地址: 博学路姚桥乡磨李社区西门" class="tip">
+                                                <i>
+                                    <b>
+                                    </b>胜利汽修服务中心</i>
+                                            </li>
+                                            <li infinityname="建亮汽修" infinityid="13899" tiphtml="联系人: 朱老板<br></li>联系电话: 13838228044<br/>省份: 河南<br/>城市: 郑州市<br/>地区: 金水区<br/>地址: 博学路与薛夏南路交叉口向北50米" class="tip">
+                                                <i>
+                                    <b>
+                                    </b>建亮汽修</i>
+                                            </li>
+                                        </ul> -->
+                                        <ul>
+                                            <li class="tip" ng-repeat="i in item1">
+                                                <i ng-bind="i.clientName" ng-click="takeCon(i)"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pageDiv" style="left: 0px; height: 25px; width: 164px; top: 23px; display: none;">
+                                        <a class="prev disabled">&lt;</a>
+                                        <i class="page" style="width: 94px;">1 / 714</i>
+                                        <a class="next">&gt;</a></div>
+                                </div>
+                            </li>
+                            <li id="field_consigner" class="li_form" style="width: 308px;">
+                                <label for="consigner" class="editableLabel">
+                                    <span class="red">*</span>发货人：</label>
+                                <input id="consigner" name="consigner" type="text" class="InpText f12 required" maxlength="256" style="width: 154px;">
+                            </li>
+                            <li id="field_consigner_mobile" class="li_form" style="width: 308px;">
+                                <label for="consigner_mobile" class="editableLabel">
+                                    <span class="red">*</span>联系电话：</label>
+                                <input id="consigner_mobile" name="consigner_mobile" type="text" class="InpText f12 required" maxlength="256" style="width: 154px;">
+                            </li>
+                        </ul>
+                        <ul class="clearfix" style="position: relative; z-index: 294;">
+                            <li id="field_consigner_address" class="li_form" style="width: 924px;">
+                                <label for="consigner_address" class="editableLabel">
+                                    <span class="red">*</span>联系地址：</label>
+                                <input id="consigner_address" name="consigner_address" type="text" class="InpText f12 required" maxlength="256" style="width: 770px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="handprocess_order" id="SheetDiv_货品信息">
+                        <h3 class="pr">货品信息</h3>
+                        <div id="anchor_货品信息"></div>
+                        <div class="form_table clearfix" style="position: relative; z-index: 293;">
+                            <table width="100%" cellspacing="0" border="0" name="tms_order_goods" id="field_tms_order_goods">
+                                <thead>
+                                    <tr>
+                                        <td colspan="4" class="tdoperagroup">
+                                            <span class="add">
+                                                <a href="javascript:void(0)" ng-click="addLine()">添加行</a>
+                                            </span>
+                                            <span class="del">
+                                                <a href="javascript:void(0)" ng-click="delLine()">删除行</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="width:30px;">
+                                            <input type="checkbox" name="all" ng-click="selectAll()">
+                                        </th>
+                                        <th>序号</th>
+                                        <th>商品名称</th>
+                                        <th>收货数量</th>
+                                    </tr>
+                                    
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" name="tms_order_goods">
+                                        </td>
+                                        <td class="uic_form_select" style="width: 308px; display: table-cell;">
+                                            <span class="selectDiv">1</span>
+                                        </td>
+                                        <td style="width: 308px;">
+                                            <input name="goods_name_2" type="text" class="InpText f12" style="width: 234px;">
+                                        </td>
+                                        <td style="width: 308px;">
+                                            <input name="goods_num_3" type="text" class="InpText f12 digits" style="width: 234px;">
+                                        </td>
+                                    </tr>
+                                    <tr ng-repeat="a in lines track by $index">
+                                        <td>
+                                            <input type="checkbox" name="tms_order_goods" ng-model="checkB">
+                                        </td>
+                                        <td id="field_goods_type_1" class="uic_form_select" style="width: 308px; display: table-cell;">
+                                            <span class="selectDiv">{{$index+2}}</span>
+                                        </td>
+                                        <td id="field_goods_name_2" style="width: 308px;">
+                                            <input id="goods_name_2" name="goods_name_2" type="text" class="InpText f12" style="width: 234px;" ng-model="a.goodsName">
+                                        </td>
+                                        <td id="field_goods_num_3" style="width: 308px;">
+                                            <input id="goods_num_3" name="goods_num_3" type="text" class="InpText f12 digits" style="width: 234px;" ng-model="a.idNumber">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="handprocess_order" id="SheetDiv_应收款信息">
+                        <h3 class="pr">应收款信息</h3>
+                        <div id="anchor_应收款信息"></div>
+                        <ul class="clearfix" style="position: relative; z-index: 292;">
+                            <li id="field_collection_payment" class="li_form" style="width: 308px;">
+                                <label for="collection_payment" class="editableLabel">代收货款：</label>
+                                <input id="collection_payment" name="collection_payment" type="text" class="InpText f12 number" scale="2" min="-999999999999999" max="999999999999999" style="width: 154px;">
+                            </li>
+                            <li id="field_fee_goods_count" class="li_form" style="width: 308px;">
+                                <label for="fee_goods_count" class="editableLabel">
+                                    <span class="red">*</span>商品件数：</label>
+                                <input id="fee_goods_count" name="fee_goods_count" type="text" class="InpText f12 required digits" min="-999999999999999" max="999999999999999" style="width: 154px;">
+                            </li>
+                            <li id="field_transport_charge" class="li_form" style="width: 308px;">
+                                <label for="transport_charge" class="editableLabel">
+                                    <span class="red">*</span>运费总计：</label>
+                                <input id="transport_charge" name="transport_charge" type="text" class="InpText f12 required" maxlength="256"  style="width: 154px;">
+                            </li>
+                        </ul>
+                        <ul class="clearfix" style="position: relative; z-index: 291;">
+                            <li id="field_tr_payer" class="li_form uic_form_select" style="width: 308px; display: list-item;">
+                                <label class="authoritylab  editableLabel" for="tr_payer">
+                                    <span style="color: red;">*</span>运费付款方：</label>
+                                <div class="selectDiv">
+                                    <input name="tr_payer" readonly="true" style="width:154px" class="authorityInp uicSelectInp  required" value="收货方" infinityid="1" id="valway">
+                                    <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;" id="serbtn" ng-click="serbtn()"></a>
+                                    <div class="uicSelectData" style="max-height:254px;width:164px" ng-show="show" id="ways">
+                                        <ul>
+                                            <li class="licheck" infinityname="收货方" infinityid="1">
+                                                <i>收货方</i>
+                                            </li>
+                                            <li infinityname="发货方" infinityid="2">
+                                                <i>发货方</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="field_current_bar_code" class="li_form" style="width: 308px;">
+                                <label for="current_bar_code" class="editableLabel">预编码：</label>
+                                <input id="current_bar_code" name="current_bar_code" type="text" class="InpText f12" maxlength="256" style="width: 154px;">
+                            </li>
+                        </ul>
+                        <ul class="clearfix" style="position: relative; z-index: 290;">
+                            <li id="field_formPayType" class="li_form" style="width: 924px;">
+                                <div sign="formPayType"></div>
+                            </li>
+                        </ul>
+                        <ul class="clearfix" style="position: relative; z-index: 289;">
+                            <li id="field_receivables" class="li_form" style="width: 308px;">
+                                <label for="receivables" class="editableLabel">服务站应收：</label>
+                                <input id="receivables" name="receivables" type="text" class="InpText f12" maxlength="256"  style="width: 154px;">
+                            </li>
+                            <li id="field_payment_by_dispatcher" class="li_form" style="width: 308px;">
+                                <label for="payment_by_dispatcher" class="editableLabel">配送员应收：</label>
+                                <input id="payment_by_dispatcher" name="payment_by_dispatcher" type="text" class="InpText f12" maxlength="256"  style="width: 154px;">
+                            </li>
+                        </ul>
+                        <ul class="clearfix" style="position: relative; z-index: 288;">
+                            <li id="field_remark" class="li_form" style="width: 924px;">
+                                <label for="remark" class="editableLabel">客户备注：</label>
+                                <input id="remark" name="remark" type="text" class="InpText f12" maxlength="256" style="width: 770px;">
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <!--按钮组-->
+                <div class="handprocess_btngroup" id="bottom_button">
+                    <!-- <input type="button" class="orange_btn33 cp" onmouseover="this.className='orange_btn33_hover cp'" onmouseout="this.className='orange_btn33 cp'" onClick="_submitProcess();" value="提交" />-->
+                    <input type="button" class="grey_btn33 cp" value="提交并打印" />
+                    <input type="button" value="提交" class="orange_btn33 cp" ng-click="saveDraft()">
+                </div>
+            </div>
+            <!--锚点-->
+            <div id="anchorDiv" class="body_right"></div>
+        </div>
+    </div>
+    <a href="javascript:;" class="orange_btn33 prompt" ng-show="prompt">提交成功</a>
+</div>

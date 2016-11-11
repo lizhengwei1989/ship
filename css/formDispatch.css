@@ -1,0 +1,483 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.order-detail {
+    width: 924px;
+    background: #ffffff;
+}
+
+.mer-order {
+    width: 922px;
+    border: 1px solid #dadada;
+    padding: 0 0 5px 0;
+}
+
+.mer-order-title {
+    width: 922px;
+    height: 30px;
+    background: #f5f5f5;
+    position: relative;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+}
+
+.mer-order-title label {
+    color: #000;
+    margin-left: 5px;
+}
+
+.mer-order-delete {
+    position: absolute;
+    right: 10px;
+    line-height: 30px;
+    font-size: 14px;
+    text-decoration: none!important;
+}
+
+.mer-order-con li {
+    width: 922px;
+    color: #666;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.moc-li-div {
+    width: 461px;
+    float: left;
+}
+
+.mer-order-con li label {
+    margin-left: 15px;
+    color: #000;
+    font-weight: 500;
+}
+
+.mer-order-con table {
+    width: 750px;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.table th {
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    border-left: 1px solid #f0f0f0;
+    font-weight: 400;
+}
+
+.table td {
+    padding: 5px;
+    background-color: #fff;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    border-left: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.table tr {
+    border-right: 1px solid #f0f0f0;
+}
+
+.order-goods-input {
+    width: 100px;
+    height: 25px;
+}
+
+.order-add {
+    text-decoration: none!important;
+    border: 1px solid #bfd6af;
+    background-color: #f5fbef;
+    border-radius: 2px;
+    height: 18px;
+    line-height: 18px;
+    padding: 5px 14px;
+    color: #333;
+    margin-top: 8px;
+    margin-left: 15px;
+    float: left;
+}
+
+.moc-li-div3 {
+    float: left;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+}
+
+.clearFix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.ld_bRNone {
+    border-right: none;
+}
+
+.ld_receipt_information {
+    margin: 0 auto;
+}
+
+.ld_receipt_information_head {
+    height: 56px;
+}
+
+.ld_receipt_num {
+    font-size: 15px;
+    color: #333;
+    margin-right: 120px;
+    margin-top: 20px;
+}
+
+.ld_receipt_num p {
+    margin-left: 19px;
+}
+
+.ld_receipt_sort {
+    margin-top: 16px;
+}
+
+.ld_receipt_sort b {
+    font-size: 12px;
+    color: #707070;
+    font-style: normal;
+}
+
+.ld_receipt_sort select {
+    width: 150px;
+    height: 24px;
+}
+
+.ld_receipt_handle {
+    margin-left: 19px;
+    margin-top: 18px;
+}
+
+.ld_receipt_handle a {
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+    background: #f23e47;
+    color: #fff;
+    height: 9px;
+    line-height: 9px;
+    text-align: center;
+    padding: 7px 10px;
+    font-size: 12px;
+    margin-right: 9px;
+}
+
+.ld_receipt_information_body_head {
+    height: 32px;
+    background: #e5e5e5;
+    line-height: 32px;
+    width: calc(100%-36px);
+    padding-left: 16px;
+    padding-right: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ld_receipt_information_body_head .ld_listNum {
+    font-size: 15px;
+    line-height: 32px;
+    height: 32px;
+}
+
+.ld_receipt_information_body_head .ld_listNum span {
+    color: #333;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.ld_receipt_information_body_head .ld_listNum b {
+    font-style: normal;
+    font-size: 15px;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.ld_receipt_information_body_head .ld_listNum i {
+    color: #1e88fe;
+}
+
+.handprocess_order li.li_form .ld_listHandle {
+    float: right;
+}
+
+.ld_receipt_information_body_head .ld_listHandle i {
+    cursor: pointer;
+    margin-left: 12px;
+    background: url(../styles/images/ld_delete.png) left no-repeat;
+    background-size: contain;
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+.ld_receipt_information_body_head .ld_listHandle span {
+    cursor: pointer;
+    background: url(../styles/images/ld_note.png) left no-repeat;
+    background-size: contain;
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+.ld_receipt_information_content {
+    border-bottom: 1px solid #ccc;
+}
+
+.ld_receipt_information_content .ld_signIn {
+    height: 100%;
+    width: 79px;
+    text-align: center;
+    padding-top: 50px;
+    color: #228cff;
+    font-size: 14px;
+}
+
+.ld_receipt_information_content .ld_signInMessage {
+    width: 844px;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right {
+    width: 844px;
+    border-right: 1px solid #ccc;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send {
+    width: 645px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_head {
+    width: (100%-18px);
+    padding-left: 18px;
+    height: 54px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_head span {
+    background-size: contain;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_head strong {
+    display: inline-block;
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #fa5a5a;
+    margin-right: 5px;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_head i {
+    background-size: contain;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes {
+    width: 100%;
+    height: 71px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_send_moneyMes {
+    width: 50%;
+    height: 71px;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_send_moneyMes li {
+    width: 32%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_send_moneyMes li p {
+    color: #000;
+    float: none;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_send_moneyMes li div {
+    font-size: 12px;
+    color: #000;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_send_moneyMes .ld_result {
+    border-right: none;
+    background: #fa5a5a;
+    color: #fff;
+    width: 33.38%;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_send_moneyMes .ld_result p {
+    color: #fff;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_send_moneyMes .ld_result.complete {
+    background: #42c255;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_send_moneyMes .ld_result.complete p {
+    background: url(../styles/images/complete.png) center no-repeat;
+    background-size: auto;
+    width: 100%;
+    height: 25px;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_rec_moneyMes {
+    width: 50%;
+    height: 71px;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_rec_moneyMes li {
+    width: 33%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_rec_moneyMes li p {
+    color: #000;
+    float: none;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_rec_moneyMes li div {
+    font-size: 12px;
+    color: #000;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_rec_moneyMes .ld_result {
+    border-right: none;
+    background: #fa5a5a;
+    color: #fff;
+    width: 33.3%;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_rec_moneyMes .ld_result p {
+    color: #fff;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_rec_moneyMes .ld_result.complete {
+    background: #42c255;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_moneyMes .ld_rec_moneyMes .ld_result.complete p {
+    background: url(../styles/images/complete.png) center no-repeat;
+    background-size: auto;
+    width: 100%;
+    height: 25px;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_show {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: #666;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_show.show {
+    background: url(../styles/images/ld-show.png) 150px center no-repeat;
+    background-size: auto;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_rec_send .ld_rec_send_show.hide {
+    background: url(ld-top.png) 150px center no-repeat;
+    background-size: auto;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_coupon {
+    padding-left: 19px;
+    padding-top: 19px;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_coupon p {
+    width: 140px;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #999;
+    margin-bottom: 5px;
+    font-size: 13px;
+    float: none;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_coupon p em {
+    color: #212121;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_coupon .ld_use_coupon {
+    background: url(../styles/images/ld_coupon.png) left no-repeat;
+    background-size: auto;
+    padding-left: 30px;
+    float: none;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_signInMessage_right .ld_signInMessage_coupon .ld_use_card {
+    background: url(../styles/images/ld_card.png) left no-repeat;
+    background-size: auto;
+    padding-left: 30px;
+    float: none;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_goods {
+    width: 845px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    display: none;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_goods th {
+    text-align: center;
+    font-weight: normal;
+    border-right: 1px solid #ccc;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_goods td {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.ld_receipt_information_content .ld_signInMessage .ld_goods tbody tr td div p {
+    text-align: center;
+    margin: 0 auto;
+}

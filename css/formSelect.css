@@ -1,0 +1,84 @@
+@charset "utf-8";
+.selectDiv .uicReadonly {
+    border: 0px solid #D4D4D4!important;
+    box-shadow: 0 0 0 #E7E7E7 inset!important;
+}
+
+.selectDiv .uicSelectData {
+    display: none;
+    background-color: #FDFDFD;
+    border: 1px solid #D4D4D4;
+    box-shadow: 0 1px 3px #E7E7E7 inset;
+    border-radius: 3px 3px 3px 3px;
+    height: auto;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    top: 22px;
+    width: 171px;
+    z-index: 99;
+}
+
+.selectDiv .uicSelectData ul {
+    height: auto;
+    margin: 0;
+    padding: 2px 0;
+    width: 100%;
+}
+
+.selectDiv .uicSelectData ul li {
+    height: 20px;
+    line-height: 20px;
+    padding: 2px 0;
+    position: relative;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 100%;
+    cursor: pointer;
+}
+
+.selectDiv .uicSelectData ul li:hover {
+    background-color: #ffefef;
+}
+
+.selectDiv .uicSelectData ul li.licheck {
+    background-color: #ffefef;
+}
+
+.selectDiv .uicSelectData ul li i {
+    font-family: "微软雅黑";
+    font-size: 12px;
+    margin-left: 10px;
+    text-decoration: none;
+    line-height: 20px;
+    white-space: nowrap;
+    color: #666666;
+    vertical-align: middle;
+}
+
+.selectDiv .uicSelectData ul li {
+    height: 28px;
+}
+
+.selectDiv .uicSelectData ul li i.licheckMore {
+    background: url(../images/ultraselect/ms_ico.png) no-repeat scroll 0 6px transparent;
+    cursor: pointer;
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    font-style: normal;
+    height: 20px;
+    line-height: 20px;
+    padding: 2px 0 2px 20px;
+    text-align: left;
+    vertical-align: middle;
+    /*width: 130px;*/
+}
+
+.selectDiv .uicSelectData ul li i.selected {
+    background-position: 0 -31px;
+}
+
+.uiclabelRead {
+    color: #E99031!important;
+}

@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* CSS Document */
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; }
+.ui-helper-clearfix:after { clear: both; }
+.ui-helper-clearfix { zoom: 1; }
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+.ui-state-disabled { cursor: default !important; }
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.ui-widget { font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; font-size: 1.1em; background:#fff}
+.ui-widget .ui-widget { font-size: 12px; }
+.ui-widget-content {}
+.ui-widget-content a { color: #333333;}
+.ui-widget-header { width:100%; height:27px; position:relative;}
+.ui-widget-header .ui-dialog-title { font-weight:700; font-size:12px; line-height:27px;+line-height:30px;vertical-align:middle; display:block; width:100%; height:100%; text-indent:5px; cursor:move; color:#375a7d}
+.ui-dialog { border:solid 1px #517b9d; background:url(../images/dialog/popbg.png) repeat-x #d7e2ed; overflow:hidden;position:absolute; }
+
+
+
+.ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-dialog .ui-icon { }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px;+right: 3px;+bottom: 3px;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+.ui-dialog-buttonset { padding-right:20px; text-align:right; padding-bottom:10px}
+.ui-dialog-buttonset button {background:url(../images/dialog/but.png) repeat-x #d7e2ed; width:56px; height:auto; border:none; border-radius:0px; vertical-align:middle; margin-left:10px; font-size:12px; font-family:"微软雅黑"; cursor:pointer; +height:26px}
+.ui-dialog-buttonset button:hover .ui-button-text{ color:#FF6}
+.ui-button-text { font-size:12px; font-family:"宋体"; color:#FFFFFF; line-height:23px; vertical-align:middle; }
+.dialog-info-box { width:100%; height:auto;}
+.dialog-info-box td { font-size:14px; color:#1f6ea7; font-family:"宋体"; text-align:center; height:120px; position:relative}
+.dialog-info-box td div { width:230px; height:100%; padding-left:100px; position:relative; text-align:left; word-break:break-all; overflow:hidden; text-overflow: ellipsis}
+.dialog-info-box td div s { width:57px; height:52px; background:url(../images/dialog/ico.png) no-repeat; position:absolute; left:40px; top:50%; margin-top:-25px}
+.dialog-info-box td div span {float:left;text-overflow: ellipsis;word-break:break-all; line-height:20px}
+.dialog-info-box td div.ui_dialog_alert s{ background-position:-17px -87px}
+.dialog-info-box td div.ui_dialog_info s{ background-position:-17px -87px}
+.dialog-info-box td div.ui_dialog_success s{background-position:-87px -7px}
+.dialog-info-box td div.ui_dialog_warn s{background-position:-14px -8px}
+.dialog-info-box td div.ui_dialog_error s{ background-position:-156px -6px}
+.dialog-info-box td div.ui_dialog_confirm s{background-position:-14px -8px}
+.dialog-info-box td div.ui_dialog_info span {}
+.ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block; }
+
+/*弹框关闭按钮*/ 
+
+.ui-widget-header .ui-dialog-titlebar-close { width:18px; height:17px; position:absolute; right:5px; top:5px; background:url(../images/dialog/close.png)}
+.ui-widget-header .ui-dialog-titlebar-close:hover {background:url(../images/dialog/closehover.png)}
+.ui-dialog-titlebar-close:hover {}
+.ui-dialog-titlebar-close span { display:none}
+
+.ui-dialog-content { margin:0px 5px; border-radius:4px 4px 0px 0px;  background:#f4f7fa; border:solid 1px #98b2cc; border-bottom:none; overflow:hidden}
+.ui-dialog-buttonpane {margin:0px 5px; border-radius:0px 0px 4px 4px;  background:#f4f7fa; margin-bottom:5px;border:solid 1px #98b2cc; border-top:none}
+
+/* Interaction states
+----------------------------------*/
+
+
+
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+
+
+
+/* positioning */
+
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+/*
+ * jQuery UI Datepicker 1.8.17
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.ui-datepicker { width:198px; height:231px; border:solid 1px #174c74; background:url(../images/datepicker/timebg.png) repeat-x #15659f;display: none; position:relative }
+.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {position:absolute;top:2px;padding:1px;width:28px;height:28px;display:block }
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {}
+.ui-datepicker .ui-datepicker-year-prev { left:25px; background:url(../images/datepicker/pre_year.png) no-repeat center center;}
+.ui-datepicker .ui-datepicker-year-next { right:25px; background:url(../images/datepicker/next_year.png) no-repeat center center;}
+.ui-datepicker .ui-datepicker-prev { left:0px; background:url(../images/datepicker/pre_month.png) no-repeat center center;}
+.ui-datepicker .ui-datepicker-next { right:0px; background:url(../images/datepicker/next_month.png) no-repeat center center;}
+.ui-datepicker .ui-datepicker-prev-hover { background:url(../images/datepicker/pre_month.png) no-repeat center center; cursor:pointer;}
+.ui-datepicker .ui-datepicker-next-hover { background:url(../images/datepicker/next_month.png) no-repeat center center; cursor:pointer;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+.ui-datepicker .ui-datepicker-title { height:25px;  line-height:25px; text-align: center; margin:0px 15px; color:#FFF; font-size:12px; font-family:"微软雅黑" ;}
+.ui-datepicker .ui-datepicker-title select { padding:0px; margin:0px; line-height:100%; font-size:10px}
+.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.ui-datepicker span.ui-datepicker-month, 
+.ui-datepicker span.ui-datepicker-year {  font-size:12px; line-height:100%;  margin:3px 2px 0;height:20px}
+
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year {  font-size:12px; line-height:100%;  margin:3px 2px 0;height:20px}
+.ui-datepicker .ui-datepicker-calendar {width: 190px; font-size:12px; border-collapse: collapse; height:auto; margin:0px 4px; border:solid 1px #c1c1c1 }
+.ui-datepicker .ui-datepicker-calendar th { text-align: center; font-weight: bold; border: 0; background:url(../images/datepicker/week_bg.png) repeat-x center; height:22px;}
+.ui-datepicker .ui-datepicker-calendar td {background:url(../images/datepicker/day_bg.png) repeat-x center; height:22px; border-top:solid 1px #c1c1c1; border-right:solid 1px #c1c1c1;}
+.ui-datepicker-week-col { text-align:center;}
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-unselectable {height:22px; color:#CCCCCC; cursor:default;text-align:center}
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month {background:#d4d4d4;}
+.ui-datepicker .ui-datepicker-calendar td  a.ui-state-active {background:url(../images/datepicker/week_bg.png) repeat-x 0px -8px #bad4e6; font-size:12px; text-shadow:1px 1px 1px #ccc }
+
+.ui-datepicker .ui-datepicker-calendar td span{}
+.ui-datepicker .ui-datepicker-calendar td a { width:100%; height:100%; display: block; text-align:center; text-decoration: none; line-height:22px; vertical-align:middle; }
+.ui-datepicker-week-end a { color:#ff6600}
+.ui-datepicker .timeMenuSel { position:absolute; left:74px; bottom:20px; background:#FFC; border-radius:3px; box-shadow:1px 1px 3px #333}
+.ui-datepicker .timeMenuSel table tr td { text-align:center}
+.ui-datepicker .timeMenuSel table tr td.timeMenuOn{ background:#e4e4e4; color:#c77405;cursor:pointer;}
+.ui-datepicker .get_time { width:207px; height:22px; margin:10px 4px 5px 4px;text-align:right; position:relative; font-size:12px}
+.ui-datepicker .get_time .timebox { float:left; height:22px; position:relative;width:100px}
+.ui-datepicker .get_time .dataTimeText { float:left; width:29px; height:22px; line-height:22px; vertical-align:middle; padding-right:7px; color:#000; display:inline-block; padding-right:7px; +line-height:22px;border-right:1px solid #98B7CD}
+.ui-datepicker .get_time .timebox b { float:left;  width:16px; height:19px; text-align:center; background:#FFF; border-top:solid 1px #98b7cd; border-bottom:solid 1px #98b7cd;}
+.ui-datepicker .get_time .timebox b input { padding:0px; margin:0px; width:20px; height:19px; border:0px; text-align:center; line-height:18px; vertical-align:middle; float:left;}
+/*
+.tH { border:none; background:#0000FF}
+.tM { border:0px}
+.tS { border:solid 1px #FFF}
+*/
+.ui-datepicker .get_time .timebox .dpTimeUp { width:14px; height:11px; border:none; cursor:pointer; background:url(../images/datepicker/img.gif) no-repeat -32px -16px; display:block; position:absolute; right:0px; top:0px}
+.ui-datepicker .get_time .timebox .dpTimeDown {width:14px; height:11px; border:none; cursor:pointer; background:url(../images/datepicker/img.gif) no-repeat -48px -16px; display:block; position:absolute; right:0px; bottom:0px}
+.ui-datepicker .datepicker-errorSpan { width:96%;height:auto; overflow:hidden; position:absolute; left:2%; bottom:35px; clear:left; text-align:center}
+.ui-datepicker .ui-datepicker-buttonpane { width:157;height:auto; overflow:auto; position:absolute; right:3px; bottom:3px;}
+.ui-datepicker .ui-datepicker-buttonpane a.currentToday { font-size:12px; font-family:"微软雅黑"; border:0px; background:#f0f3f6; padding:2px 6px; border:solid 1px #999999; border-radius:1px; text-decoration:none; cursor:pointer; color:#FF6600;box-shadow:0px 2px 3px #333333; float:left}
+.ui-datepicker .ui-datepicker-buttonpane a.currentToday:hover {box-shadow:0px 1px 2px #333333 inset}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+.ui-datepicker div.dpTime .dataTimeText{margin-left:1px;}
+.ui-datepicker div.dpTime input{height:16px;width:18px;text-align:center;border:#ccc 1px solid;	}
+.ui-datepicker div.dpTime .tH{border-right:0px;}
+
+.ui-datepicker div.dpTime .tM{border-left:0;border-right:0;}
+.ui-datepicker div.dpTime .tS{border-left:0;border-right:0;}
+.ui-datepicker div.dpTime .tmR{width:7px;border-left:0;border-right:0;}
+.ui-datepicker div.dpTime .dpTimeUp{height:10px;width:13px;border:0px;background:url(../images/datepicker/img.gif) no-repeat -32px -16px;}
+.ui-datepicker div.dpTime .dpTimeDown{height:18px;width:60px;border:0px;background:url(../images/datepicker/img.gif) no-repeat -48px -16px;}
+.ui-datepicker div.dpTime .floatDiv{float:left}
+.ui-datepicker div.dpTime .timeMenuSel{position:absolute;background-color:#FFFFFF;	border:#ccc 1px solid;display:none;}
+.ui-datepicker div.dpTime .hhTime{margin-top:-67px; margin-left:35px;}
+.ui-datepicker div.dpTime .mmTime{margin-top:-37px; margin-left:35px;}
+.ui-datepicker div.dpTime .ssTime{margin-top:-22px; margin-left:35px;}
+
+
+
+.ui-datepicker .get_start_time {float:left; width:120px; height:22px; text-align:right; position:relative; font-size:12px;z-index:9999}
+.ui-datepicker .get_start_time .timebox { float:left; width:120px; height:22px; position:relative}
+.ui-datepicker .get_start_time .dataTimeText { float:left; width:45px; height:22px; line-height:22px; vertical-align:middle; padding-right:0px; color:#000; display:inline-block; padding-right:16px; +line-height:28px;border-right:1px solid #98B7CD}
+.ui-datepicker .get_start_time .timebox b { float:left; height:19px; text-align:center; background:#FFF; border-top:solid 1px #98b7cd; border-bottom:solid 1px #98b7cd;}
+.ui-datepicker .get_start_time .timebox b input { padding:0px; margin:0px; width:20px; height:19px; border:0px; text-align:center; line-height:18px; vertical-align:middle; float:left;}
+/*
+.tH { border:none; background:#0000FF}
+.tM { border:0px}
+.tS { border:solid 1px #FFF}
+*/
+.ui-datepicker .get_start_time .timeMenuSel { position:absolute; left:62px; bottom:22px; background:#FFC; border-radius:3px; box-shadow:1px 1px 3px #333}
+.ui-datepicker .get_start_time .timeMenuSel table tr td { text-align:center}
+.ui-datepicker .get_start_time.timeMenuSel table tr td.timeMenuOn{ background:#e4e4e4; color:#c77405;cursor:pointer;}
+.ui-datepicker .get_start_time.get_start_time .timebox .dpTimeUp { width:13px; height:11px; border:none; cursor:pointer; background:url(../images/datepicker/img.gif) no-repeat -32px -16px; display:block; position:absolute; right:0px; top:0px}
+.ui-datepicker .get_start_time.get_start_time .timebox .dpTimeDown {width:13px; height:11px; border:none; cursor:pointer; background:url(../images/datepicker/img.gif) no-repeat -48px -16px; display:block; position:absolute; right:0px; bottom:0px}
+
+.ui-datepicker .get_end_time {float:left;  width:120px; height:22px; text-align:right; position:relative; font-size:12px;z-index:9999}
+.ui-datepicker .get_end_time .timebox { float:left; width:120px; height:22px; position:relative}
+.ui-datepicker .get_end_time .dataTimeText { float:left; width:45px; height:22px; line-height:22px; vertical-align:middle; padding-right:0px; color:#000; display:inline-block; padding-right:16px; +line-height:28px;border-right:1px solid #98B7CD}
+.ui-datepicker .get_end_time .timebox b { float:left; height:19px; text-align:center; background:#FFF; border-top:solid 1px #98b7cd; border-bottom:solid 1px #98b7cd;}
+.ui-datepicker .get_end_time .timebox b input { padding:0px; margin:0px; width:20px; height:19px; border:0px; text-align:center; line-height:18px; vertical-align:middle; float:left;}
+/*
+.tH { border:none; background:#0000FF}
+.tM { border:0px}
+.tS { border:solid 1px #FFF}
+*/
+.ui-datepicker .get_end_time .timeMenuSel { position:absolute; left:62px; bottom:22px; background:#FFC; border-radius:3px; box-shadow:1px 1px 3px #333}
+.ui-datepicker .get_end_time .timeMenuSel table tr td { text-align:center}
+.ui-datepicker  .get_end_time.timeMenuSel table tr td.timeMenuOn{ background:#e4e4e4; color:#c77405;cursor:pointer;}
+.ui-datepicker .get_end_time .timebox .dpTimeUp { width:13px; height:11px; border:none; cursor:pointer; background:url(../images/datepicker/img.gif) no-repeat -32px -16px; display:block; position:absolute; right:0px; top:0px}
+.ui-datepicker .get_end_time .timebox .dpTimeDown {width:13px; height:11px; border:none; cursor:pointer; background:url(../images/datepicker/img.gif) no-repeat -48px -16px; display:block; position:absolute; right:0px; bottom:0px}
+
+
+
+
+
+.timePicker { font-size:12px; width:170px; height:185px;   background:#ffffff;+height:200px; border:solid 1px #174c74; display: none; position:absolute }
+
+
+
+
+.timePicker .timeMenuSel { position:absolute; left:35px; bottom:20px; background:#FFC; border-radius:3px; box-shadow:1px 1px 3px #333}
+.timePicker .timeMenuSel table tr td { text-align:center}
+.timePicker .timeMenuSel table tr td.timeMenuOn{ background:#e4e4e4; color:#c77405;cursor:pointer;}
+.timePicker .timePickerDiv { width:auto; height:auto; border:0; border-top:0px;padding-top:5px;}
+.timePicker .timePickerDiv ul { width:100%; height:auto; margin:0px; padding:0px}
+.timePicker .timePickerDiv ul li { width:100%; height:20px; margin:1px 0px; list-style:none}
+.timePicker .timePickerDiv ul li a { width:100%; height:100%; display:block; text-indent:20px; font-family:Arial, Helvetica, sans-serif; color:#666; text-decoration:none; line-height:20px; vertical-align:middle; letter-spacing:2px}
+.timePicker .timePickerDiv ul li a:hover { background:#f8f8f8; color:#03F}
+
+.timePicker p{  width:auto; height:20px; line-height:20px;margin:0;padding:0; text-indent:5px;background:url("../images/datepicker/titlebg.png") repeat-x scroll left top transparent;} 
+.timePicker table.button {width:100%; height:auto; table-layout:fixed; padding:5px 0px; text-align:center}
+.timePicker table.button input[type=button] {width:55px; height:20px; color:#666; background:#f1f1f1; border:solid 1px #CCC; line-height:18px; vertical-align:middle; outline:none; blr:expression(this.onFocus=this.blur()); border-radius:3px; font-size:12px}
+.timePicker table.button input[type=button]:hover {background:#FFF; color:#666}
+
+
+.timePicker .get_time { width:150px; height:22px; margin:0;text-align:left; position:relative; font-size:12px}
+.timePicker .get_time .timebox { float:right; width:143px; height:22px; position:relative}
+.timePicker .get_time .dataTimeText{ float:left; width:30px; height:22px; line-height:22px; vertical-align:middle;align:right; padding-right:0px; color:#000; display:inline-block; padding-right:0px; +line-height:28px}
+.timePicker .get_time .timebox b { float:left;  width:20px; height:19px; text-align:center; background:#FFF; border-top:solid 1px #98b7cd; border-bottom:solid 1px #98b7cd;}
+.timePicker .get_time .timebox b input { padding:0px; margin:0px; width:20px; height:19px; border:0px; text-align:center; line-height:18px; vertical-align:middle; float:left;}
+.timePicker .get_time .timebox .dpTimeUp { width:13px; height:11px; border:none; cursor:pointer; background:url(../images/datepicker/img.gif) no-repeat -32px -16px; display:block; position:absolute; right:0px; top:0px}
+.timePicker .get_time .timebox .dpTimeDown {width:13px; height:11px; border:none; cursor:pointer; background:url(../images/datepicker/img.gif) no-repeat -48px -16px; display:block; position:absolute; right:0px; bottom:0px}
+
+
+
+
+.timePicker .ui-datepicker-buttonpane { width:96%; height:auto; overflow:auto; position:absolute; left:2%; bottom:5px;}
+.timePicker .ui-datepicker-buttonpane a.currentToday { font-size:12px; font-family:"微软雅黑"; border:0px; background:#f0f3f6; padding:2px 6px; border:solid 1px #999999; border-radius:1px; text-decoration:none; cursor:pointer; color:#FF6600;box-shadow:0px 2px 3px #333333; float:left}
+.timePicker .ui-datepicker-buttonpane a.currentToday:hover {box-shadow:0px 1px 2px #333333 inset}
+.timePicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+.timePicker div.dpTime .dataTimeText{margin-left:1px;}
+.timePicker div.dpTime input{height:16px;width:18px;text-align:center;border:#ccc 1px solid;}
+.timePicker .get_time .timebox b input.tH{border-right:0px;border-left:#ccc 1px solid;}
+.timePicker div.dpTime .tM{border-left:0;border-right:0;}
+.timePicker div.dpTime .tS{border-left:0;border-right:0;}
+.timePicker div.dpTime .tmR{width:7px;border-left:0;border-right:0;}
+.timePicker div.dpTime .dpTimeUp{height:10px;width:13px;border:0px;background:url(../images/datepicker/img.gif) no-repeat -32px -16px;}
+.timePicker div.dpTime .dpTimeDown{height:18px;width:60px;border:0px;background:url(../images/datepicker/img.gif) no-repeat -48px -16px;}
+.timePicker div.dpTime .floatDiv{float:left}
+.timePicker div.dpTime .timeMenuSel{position:absolute;background-color:#FFFFFF;	border:#ccc 1px solid;display:none;}
+.timePicker div.dpTime .hhTime{margin-top:-67px; margin-left:35px;}
+.timePicker div.dpTime .mmTime{margin-top:-37px; margin-left:35px;}
+.timePicker div.dpTime .ssTime{margin-top:-22px; margin-left:35px;}
+
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi { width:auto; }
+.ui-datepicker-multi .ui-datepicker-group { float:left; }
+.ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; text-align: right}
+.ui-datepicker-row-break { clear:both; width:100%; font-size:0em; }
+
+
+/*time*/
+.ui-daterangepickercontain {position:absolute;z-index:999;}
+.ui-daterangepickercontain .ui-daterangepicker {float:left;padding:5px 2px!important;width:auto;display:inline;background:#ffffff;clear:left;border-radius:4px; border:solid 1px #09F; box-shadow:1px 2px 3px #CCC}
+.ui-daterangepicker ul, .ui-daterangepicker .ranges, .ui-daterangepicker .range-start, .ui-daterangepicker .range-end {float:left;padding:0;margin:0;}
+.ui-daterangepicker .ranges {width:auto;position:relative;}
+.ui-daterangepicker .range-start, .ui-daterangepicker .range-end {margin:0px 3px;}
+.ui-daterangepicker a.btnDone {font-size:12px; font-family:"微软雅黑";  background:#f0f3f6;  border:solid 1px #999999; border-radius:1px; color:#333333; cursor:pointer; box-shadow:0px 0px 1px #333333; position:absolute; bottom:6px; right:7px; width:36px; height:21px; text-align:center; line-height:21px; vertical-align:middle}
+.ui-daterangepicker a.btnDone:hover {box-shadow:0px 1px 2px #333333 inset}
+.ui-daterangepicker ul {width:17.6em;background:none;border:0;}
+.ui-daterangepicker li {list-style:none;padding:1px;cursor:pointer;margin:1px 0;}
+.ui-daterangepicker li.ui-state-hover, .ui-daterangepicker li.ui-state-active {padding:0;}
+.ui-daterangepicker li.preset_0 {margin-top:1.5em !important;}
+.ui-daterangepicker .ui-widget-content a {text-decoration:none !important;}
+.ui-daterangepicker li a {font-weight:normal;margin:.3em .5em;display:block;}
+.ui-daterangepicker li span {float:right;margin:.3em .2em;}
+.ui-daterangepicker .title-start, .ui-daterangepicker .title-end {display:block;margin:0 0 .2em;font-size:12px;padding:0 4px 2px; display:none}
+.ui-daterangepicker .ui-datepicker-inline {font-size:1em;}
+.ui-daterangepicker-arrows {padding:2px;width:204px;position:relative;}
+.ui-daterangepicker-arrows input.ui-rangepicker-input {width:158px;margin:0 2px 0 20px;padding:2px;height:1.1em;}
+.ui-daterangepicker-arrows .ui-datepicker-prev, .ui-daterangepicker-arrows .ui-datepicker-next {position:absolute;top:2px;padding:1px;width:28px;height:28px;display:block}
+.ui-daterangepicker-arrows .ui-daterangepicker-prev {left:2px;}
+.ui-daterangepicker-arrows .ui-daterangepicker-next {right:2px;}
+
+.range-start .ui-datepicker,.range-end .ui-datepicker { height:260px;}
+.ui-datepicker-submit { font-size:12px;  background:#f0f3f6;padding:1px 5px; *padding:0px 0px;border:solid 1px #999999; border-radius:1px; color:#333333; cursor:pointer;  margin-right: 10px }
+.ui-datepicker-submit:hover { box-shadow:0 1px 2px #666666 inset}
+.ui-datepicker-close { font-size:12px;  background:#f0f3f6; padding:1px 5px;*padding:0px 0px; border:solid 1px #999999; border-radius:1px; color:#333333; cursor:pointer; }
+.ui-datepicker-close:hover { box-shadow:0 1px 2px #666666 inset}
+.ui-datepicker-today a {background:url(../images/datepicker/today.png) no-repeat center center; font-size:12px; text-shadow:1px 1px 1px #ccc; }
+.datepicker-errorSpan span.errorSpan{color:red}
+/*xuzhe  2012.10.31*/
+.ui-dialog { border:solid 1px #d7d7d7; background:url(../images/dialog/pop_bg.png) repeat-x #ededed;}
+.ui-widget-header .ui-dialog-title {text-indent:10px; color:#000000}
+.ui-dialog-content {border:solid 1px #d7d7d7; border-bottom:none; background:#FFFFFF;}
+.ui-dialog-buttonpane {border:solid 1px #d7d7d7; border-top:none; background:#FFFFFF;}
+.ui-dialog-buttonset { padding-right:0px; text-align:center;}
+.ui-dialog-buttonset button {background:url(../images/dialog/but_off.png) repeat-x ; width:51px; height:24px; border:solid 1px #dbdbdb; border-radius:4px; }
+.ui-button-text{color:#333333;}
+.ui-dialog-buttonset button:hover {background:url(../images/dialog/but_on.png) repeat-x ; border:solid 1px #325d80;}
+.ui-dialog-buttonset button:hover .ui-button-text{color:#fff;}
+.ui-button-text { line-height:20px;}
+.ui-widget-header .ui-dialog-titlebar-close {background:url(../images/dialog/close_icon.png)}
+.ui-widget-header .ui-dialog-titlebar-close:hover {background:url(../images/dialog/closehover_icon.png)}
+/*qinghong*/
+.ui-datepicker { width:216px; height:210px;border:solid 1px #d7d7d7; background:url(../images/datepicker/timebg.png) repeat-x #ffffff;}
+.range-start .ui-datepicker,.range-end .ui-datepicker { height:210px;}
+.ui-datepicker .ui-datepicker-title { color:#49678f; }
+.ui-datepicker .ui-datepicker-calendar {width:216px; margin:0px 0px; border:solid 0px #c1c1c1 }
+.ui-datepicker .ui-datepicker-calendar th {font-weight: 100;background:url(../images/datepicker/week_bg.png) repeat-x center; color:#666666; border:0px solid #ffffff; height:23px; }
+.ui-datepicker .ui-datepicker-calendar td {background:url(../images/datepicker/day_bg.png) repeat-x center; color:#333333; border:0px solid #ffffff;  height:23px; }
+.ui-daterangepickercontain .ui-daterangepicker { border:solid 0px #09F; box-shadow:0px 0px 0px #CCC}
+.ui-datepicker .ui-datepicker-calendar td  a.ui-state-active {background:url(../images/datepicker/week_bg.png) repeat-x 0px -8px #d2e9ff; font-size:12px; text-shadow:1px 1px 1px #ccc }
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month {background:#ffffff;}
+.ui-daterangepicker a.btnDone {font-size:12px; font-family:"微软雅黑";  background:url(../images/datepicker/blueBtn.png);  border:solid 0px #999999; border-radius:0px; color:#ffffff; cursor:pointer; box-shadow:0px 0px 0px #fffff; position:absolute; bottom:6px; right:7px; width:53px; height:25px; text-align:center; line-height:25px; vertical-align:middle}
+.ui-daterangepicker a.btnDone:hover {box-shadow:0px 1px 2px #333333 inset}
+.ui-datepicker-buttonpane { clear:left; text-align: right}
+a.uicimageclass {float:right;margin-top:3px;margin-right:3px;width:16px;height:16px;text-decoration:none;display:block;}
+a.uiccalendar { background:url(../images/datepicker/calendar-day.png) no-repeat center left;}
+a.uicimagehide{display:none;}

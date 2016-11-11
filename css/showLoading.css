@@ -1,0 +1,16 @@
+@charset "utf-8";
+.loading-indicator {
+    height: 160px;
+    width: 160px;
+    background: url('../images/loading.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.loading-indicator-overlay {
+    /* 	position: fixed !important;
+	position: absolute; */
+    background-color: #FFFFFF;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}

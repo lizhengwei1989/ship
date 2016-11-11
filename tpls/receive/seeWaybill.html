@@ -1,0 +1,426 @@
+<!-- 中央布局 -->
+<div class="center" style="top: 40px;">
+    <!-- 标题、表单、底部按钮 -->
+    <div class="border01 bg_grey handprocess">
+        <!-- 标题块 -->
+        <div class="handprocess_title pr clearfix" id="titleBlock">
+            <div class="title_info fl">
+                <span class="blue mr5">发货单号：</span>
+                <span class="ml10 f14 mt10">SE000162016102600114</span>
+            </div>
+            <div class="fl red stateF">未发货</div>
+            <div class="fl">
+                <a style="width:120px;" class="backBtn" href="javascript:;">打印</a>
+                <a style="width:120px;" class="backBtn" href="javascript:;" ng-click="invoiceBtn()">取消发货单</a>
+            </div>
+            <div id="viewTaskInfos" class="view_taskInfos" style="display:none"></div>
+        </div>
+        <!-- 表单 -->
+        <form id="uflowForm">
+            <!-- SheetDiv_基础信息 -->
+            <div class="handprocess_order" id="">
+                <h3 class="pr">基础信息</h3>
+                <div id="anchor_基础信息"></div>
+                <ul class="clearfix" style="position: relative; z-index: 300;">
+                    <li id="field_station_id" class="li_form uic_form_select" style="width: 308px;">
+                        <label class="authoritylab " for="station_id">服务站：</label>
+                        <p style="width:154px">飞象速达</p>
+                        <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                            <ul>
+                                <li class="licheck" infinityname="飞象速达" infinityid="16"><i>飞象速达</i></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="field_order_source" class="li_form uic_form_select" style="width: 308px;">
+                        <label class="authoritylab " for="order_source">订单来源：</label>
+                        <p style="width:154px">本站自收订单</p>
+                        <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                            <ul>
+                                <li infinityname="优汽在线订单" infinityid="1"><i>优汽在线订单</i></li>
+                                <li class="licheck" infinityname="本站自收订单" infinityid="2"><i>本站自收订单</i></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="field_order_create" class="li_form uic_form_date" style="width: 308px;">
+                        <label class="authoritylab " for="order_create">收货日期：</label>
+                        <p style="width:154px">2016-10-26 14:29</p>
+                    </li>
+                </ul>
+                <!-- <ul class="clearfix" style="position: relative; z-index: 299;">
+                        <li id="field_channels" class="li_form uic_form_select" style="width: 308px;">
+                            <label class="authoritylab " for="channels">建单渠道：</label>
+                            <p style="width:154px">速达</p>
+                            <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                                <ul>
+                                    <li infinityname="店店通" infinityid="1"><i>店店通</i></li>
+                                    <li infinityname="联营" infinityid="2"><i>联营</i></li>
+                                    <li class="licheck" infinityname="速达" infinityid="3"><i>速达</i></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul> -->
+            </div>
+            <!-- SheetDiv_收货方信息 -->
+            <div class="handprocess_order">
+                <h3 class="pr">收货方信息</h3>
+                <div id="anchor_收货方信息"></div>
+                <ul class="clearfix" style="position: relative; z-index: 298;">
+                    <li id="field_receive_id" class="li_form uflow_searchtype" resids="20369" style="width: 308px;">
+                        <label class="authoritylab " for="receive_id">收货方：</label>
+                        <p style="width:154px">鑫星汽修</p>
+                    </li>
+                    <li id="field_receive_person" class="li_form" style="width: 308px;">
+                        <label for="receive_person">接收人：</label>
+                        <p style="width: 154px;">鑫星汽修</p>
+                    </li>
+                    <li id="field_receive_telephone" class="li_form" style="width: 308px;">
+                        <label for="receive_telephone">联系电话：</label>
+                        <p style="width: 154px;">13253533779</p>
+                    </li>
+                </ul>
+                <ul class="clearfix" style="position: relative; z-index: 297;">
+                    <li id="field_receive_address" class="li_form" style="width: 924px;">
+                        <label for="receive_address">联系地址：</label>
+                        <p style="width: 770px;">南三环嵩山路</p>
+                    </li>
+                </ul>
+                <ul class="clearfix" style="position: relative; z-index: 296;">
+                    <li id="field_line_id" class="li_form uic_form_select" style="width: 308px;">
+                        <label class="authoritylab " for="line_id">线路：</label>
+                        <p style="width:154px">西南</p>
+                        <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                            <ul>
+                                <li class="licheck" infinityname="西南" infinityid="150"><i>西南</i></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="field_line_sn_id" class="li_form uic_form_select" style="width: 308px;">
+                        <label class="authoritylab " for="line_sn_id">班次：</label>
+                        <p style="width:154px">西南-14:30</p>
+                        <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                            <ul>
+                                <li class="licheck" infinityname="西南-14:30" infinityid="551"><i>西南-14:30</i></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="field_input_type" class="li_form uic_form_select" style="width: 308px;">
+                        <label class="authoritylab " for="input_type">收货方式：</label>
+                        <p style="width:154px">站点收货</p>
+                        <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                            <ul>
+                                <li class="licheck" infinityname="站点收货" infinityid="0"><i>站点收货</i></li>
+                                <li infinityname="班车回车" infinityid="1"><i>班车回车</i></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- SheetDiv_发货方信息 -->
+            <div class="handprocess_order">
+                <h3 class="pr">发货方信息</h3>
+                <div id="anchor_发货方信息"></div>
+                <ul class="clearfix" style="position: relative; z-index: 295;">
+                    <li id="field_consigner_id" class="li_form uflow_searchtype" resids="16730" style="width: 308px;">
+                        <label class="authoritylab " for="consigner_id">发货方：</label>
+                        <p style="width:154px">鑫汇丰汽配</p>
+                    </li>
+                    <li id="field_consigner" class="li_form" style="width: 308px;">
+                        <label for="consigner">发货人：</label>
+                        <p style="width: 154px;">陈玉胜</p>
+                    </li>
+                    <li id="field_consigner_mobile" class="li_form" style="width: 308px;">
+                        <label for="consigner_mobile">联系电话：</label>
+                        <p style="width: 154px;">13073789577</p>
+                    </li>
+                </ul>
+                <ul class="clearfix" style="position: relative; z-index: 294;">
+                    <li id="field_consigner_address" class="li_form" style="width: 924px;">
+                        <label for="consigner_address">联系地址：</label>
+                        <p style="width: 770px;">装饰广场B3排9号</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- SheetDiv_货品信息 -->
+            <div class="handprocess_order">
+                <h3 class="pr">货品信息</h3>
+                <div id="anchor_货品信息"></div>
+                <div class="form_table clearfix" style="position: relative; z-index: 293;">
+                    <table width="100%" cellspacing="0" border="0" name="tms_order_goods" id="field_tms_order_goods">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>商品名称</th>
+                                <th>件数</th>
+                                <th>货号</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="field_goods_type_1" class="uic_form_select" style="width: 184.8px;">
+                                    <p style="width:110.80000000000001px">1</p>
+                                    <!-- <div class="uicSelectData" style="max-height:254px;width:184.8px;display:none;">
+                                            <ul>
+                                                <li infinityname="油品" infinityid="1"><i>油品</i></li>
+                                                <li infinityname="轮胎" infinityid="2"><i>轮胎</i></li>
+                                                <li infinityname="易损件" infinityid="3"><i>易损件</i></li>
+                                                <li infinityname="养护用品" infinityid="4"><i>养护用品</i></li>
+                                                <li infinityname="底盘件" infinityid="5"><i>底盘件</i></li>
+                                                <li class="licheck" infinityname="车身件" infinityid="6"><i>车身件</i></li>
+                                                <li infinityname="发动机件" infinityid="7"><i>发动机件</i></li>
+                                            </ul>
+                                        </div> -->
+                                </td>
+                                <td id="field_goods_name_2" style="width: 184.8px;">
+                                    <p style="width: 110.8px;">配件</p>
+                                </td>
+                                <td id="field_goods_num_3" style="width: 184.8px;">
+                                    <p style="width: 110.8px;">1</p>
+                                </td>
+                                <td id="field_send_number_4" style="width: 184.8px;">
+                                    <p style="width: 110.8px;">XXX</p>
+                                </td>
+                                <!-- <td id="field_receive_number_5" style="width: 184.8px;">
+                                        <p style="width: 110.8px;"></p>
+                                    </td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 应收款信息 -->
+            <div class="handprocess_order">
+                <h3 class="pr">应收款信息</h3>
+                <div id="anchor_应收款信息"></div>
+                <div class="form_table clearfix" style="position: relative; z-index: 293;">
+                    <table width="100%" cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                                <th>代收货款</th>
+                                <th>商品件数</th>
+                                <th>运费总计</th>
+                                <th>运费付款方</th>
+                                <th>服务站应收</th>
+                                <th>配送员应收</th>
+                                <th>合计</th>
+                                <th>平账金额</th>
+                                <th>平账类型</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="uic_form_select">
+                                    <p>100</p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <p>10</p>
+                                </td>
+                                <td>
+                                    <p>收货方</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                                <td>
+                                    <p>110</p>
+                                </td>
+                                <td>
+                                    <p>110</p>
+                                </td>
+                                <td>
+                                    <p>10</p>
+                                </td>
+                                <td>
+                                    <p>代收款多收</p>
+                                </td>
+                                <td>
+                                    <p>XXXX</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 派车车辆信息 -->
+            <div class="handprocess_order">
+                <h3 class="pr">派车车辆信息</h3>
+                <div id="anchor_派车车辆信息"></div>
+                <ul class="clearfix" style="position: relative; z-index: 295;">
+                    <li id="field_consigner_id" class="li_form uflow_searchtype" resids="16730" style="width: 308px;">
+                        <label class="authoritylab " for="consigner_id">配送员：</label>
+                        <p style="width:154px">赵四</p>
+                    </li>
+                    <li id="field_consigner_mobile" class="li_form" style="width: 308px;">
+                        <label for="consigner_mobile">联系电话：</label>
+                        <p style="width: 154px;">13073789577</p>
+                    </li>
+                    <li id="field_consigner" class="li_form" style="width: 308px;">
+                        <label for="consigner">车牌号：</label>
+                        <p style="width: 154px;">京A88888</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- SheetDiv_回车登记 -->
+            <div class="handprocess_order">
+                <h3 class="pr">回车登记</h3>
+                <div></div>
+                <ul class="clearfix" style="position: relative; z-index: 288;">
+                    <li id="field_sign_status" class="li_form uic_form_select" style="width: 924px;">
+                        <label class="authoritylab " for="sign_status">配送结果：</label>
+                        <p style="width:770px">2010-10-10 13:30:40</p>
+                        <!-- <div class="uicSelectData" style="max-height:254px;width:924px;display:none;">
+                                <ul>
+                                    <li infinityname="签收" infinityid="2"><i>签收</i></li>
+                                    <li infinityname="拒签" infinityid="3"><i>拒签</i></li>
+                                    <li infinityname="部分签收" infinityid="4"><i>部分签收</i></li>
+                                    <li infinityname="二次配送" infinityid="5"><i>二次配送</i></li>
+                                </ul>
+                            </div> -->
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <div class="border01 bg_grey">
+        <!-- 站点财务收款 -->
+        <div class="handprocess_order">
+            <h3 class="pr">站点财务收款</h3>
+            <div></div>
+            <div class="form_table clearfix" style="position: relative; z-index: 293;">
+                <table width="100%" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th>代收货款</th>
+                            <th>实收代收货款</th>
+                            <th>应收运费</th>
+                            <th>实收运费</th>
+                            <th>服务站应收</th>
+                            <th>服务站实收</th>
+                            <th>配送员应交</th>
+                            <th>财务实收</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>100</p>
+                            </td>
+                            <td>
+                                <p>100</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>110</p>
+                            </td>
+                            <td>
+                                <p>110</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 财务日结 -->
+        <div class="handprocess_order">
+            <h3 class="pr">财务日结</h3>
+            <div></div>
+            <div class="form_table clearfix" style="position: relative; z-index: 293;">
+                <table width="100%" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th>应收代收款</th>
+                            <th>应收运费</th>
+                            <th>应收金额</th>
+                            <th>实收金额</th>
+                            <th>平账金额</th>
+                            <th>平账类型</th>
+                            <th>应付商户金额</th>
+                            <th>平账操作</th>
+                            <th>付款状态</th>
+                            <th>付款日期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="uic_form_select">
+                                <p>100</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>110</p>
+                            </td>
+                            <td>
+                                <p>110</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>110</p>
+                            </td>
+                            <td>
+                                <p>110</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>未付款</p>
+                            </td>
+                            <td>
+                                <p>0911</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 流转日志 -->
+        <div id="processLogAnchor" class="border01 bg_grey handprocess_daily">
+            <h2>流转日志</h2>
+            <table width="100%" class="tabelnoborder">
+                <tbody>
+                    <tr>
+                        <td width="30%" valign="top">2016-10-26 14:29</td>
+                        <td><a class="operatorTip" phone="15515732266" email="null">张小飞</a>发起工单，原因：<span>XXXX</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- 取消发货单弹出框 -->
+<div class="grey_background_template" ng-show="invoice">
+    <div class="incomingMsg_background"></div>
+    <div class="push">
+        <div class="push-tit clearfix">
+            <span class="fl">取消发货操作</span>
+            <i class="fr close"></i>
+        </div>
+        <div class="push-con">
+            <div class="select-two">
+                <span>是否确认取消</span>
+            </div>
+            <div class="submit-two">
+                <a href="javascript:;"><span class="queding" >确定</span></a>
+                <a href="javascript:;"><span class="quxiao" ng-click="invoiceCancel()">取消</span></a>
+            </div>
+        </div>
+    </div>
+</div>

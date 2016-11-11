@@ -1,0 +1,82 @@
+.formtips.formtips { line-height:24px;position: absolute; width: auto;  height: auto; border:transparent 1px solid; font-size: 12px; padding: 3px 10px 3px 10px; border-radius: 4px; z-index: 9999 }
+.formtips.formtips-top {line-height:24px}
+.formtips.formtips-right {line-height:24px}
+.formtips.formtips-down {line-height:24px}
+.formtips.formtips-left {line-height:24px}
+.formtips.formtips strong{font-weight: normal; line-height: 32px}
+.formtips.formtips em,.formtips.formtips i {position: absolute;font-style: normal; font-size:24px}
+.formtips.info { background: #DBE3FF; border-color: #A2B4EE}
+.formtips.success { background:#AEFFA9; border-color: #4EB55B}
+.formtips.error { background: #FFCECE; border-color: #DF8F8F}
+.formtips.attention { background:#FFE7A6; border-color: #C4AB65}
+.formtips.grey { background:#F2F2F2; border-color: #C9C9C9}
+.formtips.blue { background:#BCF0E1; border-color: #69BED7}
+.formtips.blue1{ background:#ffefef; border-color: #f8999b;}
+.formtips.blue2{ background:#CFD0FF; border-color: #A1A2D9;}
+.formtips.purple{background:#EEBCFF;border-color:#C276DC}
+
+.formtips.info em { color: #A2B4EE}
+.formtips.info i { color: #DBE3FF}
+.formtips.success em { color: #4EB55B}
+.formtips.success i { color: #AEFFA9}
+.formtips.error em { color: #DF8F8F}
+.formtips.error i { color: #FFCECE}
+.formtips.attention em { color: #C4AB65}
+.formtips.attention i { color: #FFE7A6}
+.formtips.grey em { color: #C9C9C9}
+.formtips.grey i { color: #F2F2F2}
+.formtips.blue em { color: #69BED7}
+.formtips.blue i { color: #BCF0E1}
+.formtips.blue1 em { color: #f8999b}
+.formtips.blue1 i { color: #ffefef}
+.formtips.blue2 em { color: #A1A2D9}
+.formtips.blue2 i { color: #CFD0FF}
+.formtips.purple em { color: #C276DC}
+.formtips.purple i { color: #EEBCFF}
+
+.formtips.formtips-top em{bottom:-13px;}
+.formtips.formtips-top i{bottom:-12px;}
+.formtips.formtips-right em {left:-12px;z-index: 1}
+.formtips.formtips-right i {left:-11px;z-index: 1}
+.formtips.formtips-down em {top:-13px;z-index: 1}
+.formtips.formtips-down i {top:-12px;z-index: 1}
+.formtips.formtips-left em {right:-12px;z-index: 1}
+.formtips.formtips-left i {right:-11px;z-index: 1}
+
+.form-1 { margin: 0; padding: 0; width: 330px; height: auto;}
+.form-1 input[type='checkbox'] { }
+.form-1 li { width: 100%; height: auto; padding: 5px 0; list-style: none; position: relative; line-height: 24px; vertical-align: top; font-size: 0; z-index: 5}
+.form-1 li b { width: 105px; height: 100%; display: inline-block; padding-right: 5px;  font-weight: normal; text-align: right; font-size: 12px; vertical-align: middle; *+display: inline; *+zoom:1}
+.form-1 li label { width: auto; padding-right: 10px; height: auto; display: inline-block; font-size: 12px; line-height: 24px; vertical-align: middle; *+display: inline; *+zoom:1 }
+.form-1 li label .val { width: 195px; height: 24px;line-height: 22px;  border:#cccccc 1px solid; padding: 0; margin: 0; font-size: 12px;border-radius: 4px; padding-left: 5px;}
+
+
+
+.form-2 { margin: 0; padding: 0;height: auto; font-size: 0;width:1000px}
+.form-2 input[type='checkbox'] { }
+.form-2 li {margin-top:30px; height: auto;margin-right:20px;list-style: none; position: relative; line-height: 24px; vertical-align: top; font-size: 0; display: inline-block; z-index: 5; vertical-align: top;*+display: inline; *+zoom:1}
+.form-2 li b {cursor:pointer;background:#F2F2F2;border: 1px solid #C9C9C9;border-radius: 6px 6px 6px 6px;width: 110px; height: 100%; display: inline-block;  font-weight: normal; text-align: center; font-size: 12px;vertical-align: middle;*+display: inline; *+zoom:1}
+.form-2 li label { width: auto; padding-right: 10px; height: auto; display: inline-block; font-size: 12px; line-height: 24px; vertical-align: middle;*+display: inline; *+zoom:1  }
+.form-2 li label .val { width: 195px; height: 22px; line-height: 22px; border:#cccccc 1px solid; padding: 0; margin: 0; font-size: 12px;border-radius: 4px; padding-left: 5px}
+
+
+.form-3 { margin: 0; padding: 0; width: 220px; height: auto; font-size: 0}
+.form-3 input[type='checkbox'] { }
+.form-3 li {float:left; width: 330px; height: auto; padding: 5px 0; list-style: none; position: relative; line-height: 24px; vertical-align: top; font-size: 0; display: inline-block; z-index: 5;vertical-align: top;*+display: inline; *+zoom:1}
+.form-3 li b { height: 100%; display: inline-block;  font-weight: normal; text-align: center; font-size: 12px;vertical-align: middle;*+display: inline; *+zoom:1}
+.form-3 li label { width: auto; padding-right: 10px; height: auto; display: inline-block; font-size: 12px; line-height: 24px; vertical-align: middle;*+display: inline; *+zoom:1;  }
+.form-3 li label .val { width: 195px; height: 22px;line-height: 22px;  border:#cccccc 1px solid; padding: 0; margin: 0; font-size: 12px;border-radius: 4px; padding-left: 5px; }
+
+
+.form-4 { margin: 0; padding: 0; width: 1320px; height: auto; font-size: 0}
+.form-4 input[type='checkbox'] { }
+.form-4 li { width: 330px; height: auto; padding: 5px 0; list-style: none; position: relative; line-height: 24px; vertical-align: top; font-size: 0; display: inline-block; z-index: 5; vertical-align: top;*+display: inline; *+zoom:1}
+.form-4 li b { width: 110px; height: 100%; display: inline-block;  font-weight: normal; text-align: right; font-size: 12px;vertical-align: middle;*+display: inline; *+zoom:1}
+.form-4 li label { width: auto; padding-right: 10px; height: auto; display: inline-block; font-size: 12px; line-height: 24px; vertical-align: middle;*+display: inline; *+zoom:1  }
+.form-4 li label .val { width: 195px; height: 22px;line-height: 22px;  border:#cccccc 1px solid; padding: 0; margin: 0; font-size: 12px;border-radius: 4px; padding-left: 5px}
+.f-hover { border-color: #A2B4EE!important; }
+
+
+
+
+

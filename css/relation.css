@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.relationSearch {
+    padding: 5px 0;
+}
+
+.relationSearch li.relationSearch_li {
+    padding: 3px 0;
+    width: 45%;
+    float: left;
+    font-size: 12px
+}
+
+.relationSearch li.relationSearch_li label {
+    width: 80px;
+    text-align: right;
+    display: inline-block;
+    *+float: left;
+    vertical-align: middle;
+    line-height: 22px
+}
+
+.relationSearch li.relationSearch_li input.InpText {
+    *+float: left
+}
+
+.relationSearch li.relationSearch_li div.selectDiv {
+    *+float: left;
+}
+
+.relationSearch li.relationSearch_li div.selectDivTree {
+    *+float: left;
+}
+
+.relationSearch li.relationSearch_li a.uicSelectMore,
+.relationSearch li.relationSearch_li a.calendar {
+    right: 0!important;
+}
+
+.relationSearch .advancedSearch_btn {
+    height: 30px;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed #CCC;
+    text-align: center
+}
+
+.relationSearch .advancedSearch_btn input.submit {
+    border: 0;
+    background: url(../images/button/btn_search.png) no-repeat;
+    width: 133px;
+    height: 30px;
+    line-height: 30px;
+}

@@ -1,0 +1,118 @@
+<style type="text/css">
+table {
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    border-collapse: collapse;
+    border: 1px solid #333;
+    width: 1044px;
+    margin: 0 19px;
+    text-align: center;
+}
+
+table th,
+td {
+    border: 1px solid #333;
+    padding: 8px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 400;
+}
+</style>
+<div class="print">
+    <span class="printbtn" onclick="a()">打印</span>
+</div>
+<div class="list">
+    <h1>国美车福物流派车单</h1>
+    <div class="tit">
+        <span>服务站：</span>
+        <span class="value">服务站A服务站A服务站A</span>
+        <span>派车单号：</span>
+        <span class="value">PC001001201611010001</span>
+        <span>创建时间：</span>
+        <span class="value">2016-11-01 10:26:37</span>
+    </div>
+    <div class="massage">
+        <span>配送路线：</span>
+        <span class="magkey">东线</span>
+        <span>班次：</span>
+        <span class="magkey">10：00</span>
+        <span>车牌号：</span>
+        <span class="magkey">京A668888</span>
+        <span>配送员：</span>
+        <span class="magkey">佟大为-13988876588</span>
+    </div>
+    <table>
+        <tr>
+            <th>序号</th>
+            <th>发货单号</th>
+            <th>商品名称</th>
+            <th>发货方</th>
+            <th>收货方</th>
+            <th>收货方地址</th>
+            <th>运费</th>
+            <th>实收运费</th>
+            <th>代收贷款</th>
+            <th>实收贷款</th>
+            <th>配送员应收</th>
+            <th>签字</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>FH001001201611010001</td>
+            <td>保险杠*1
+                <br/>刹车片*1</td>
+            <td>宝马汽配
+                <br/>13811216688</td>
+            <td>四方维修
+                <br/>15898765431</td>
+            <td>北四环东路58号</td>
+            <td>20</td>
+            <td></td>
+            <td>100</td>
+            <td></td>
+            <td>120</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>FH001001201611010001</td>
+            <td>前大灯*1
+                <br/>前大灯*1
+                <br/>前大灯*1</td>
+            <td>久久汽车灯饰
+                <br/>15678902131</td>
+            <td>小蜜蜂修理厂
+                <br/>15898765590</td>
+            <td>广渠路栀子大厦</td>
+            <td>10</td>
+            <td></td>
+            <td>0</td>
+            <td></td>
+            <td>0</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>合计</td>
+            <td></td>
+            <td>3件</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>30.00</td>
+            <td></td>
+            <td>100.00</td>
+            <td></td>
+            <td>120.00</td>
+            <td></td>
+        </tr>
+    </table>
+    <div class="page">
+        <span></span><span>1</span><span>-</span><span>1</span>
+    </div>
+</div>
+<script language="javascript">
+function a() {
+    $(".list").jqprint();
+}
+</script>

@@ -1,0 +1,91 @@
+.print {
+    height: 156px;
+    width: 1090px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.print .printbtn {
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    display: block;
+    background-color: #e5e5e5;
+    height: 36px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.list {
+    height: 750px;
+    width: 1088px;
+    border: 1px solid #ffaead;
+    margin: 20px auto;
+    position: relative;
+}
+
+h1 {
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.tit {
+    height: 54px;
+    width: 1030px;
+    border-bottom: dashed 1px #333;
+    margin: 0 auto;
+    line-height: 54px;
+}
+
+.tit span {
+    display: block;
+    float: left;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.value {
+    padding-right: 85px;
+}
+
+.massage {
+    height: 68px;
+    width: 1030px;
+    padding: 0px 29px;
+    line-height: 58px;
+}
+
+.massage span {
+    display: block;
+    float: left;
+    font-size: 16px;
+}
+
+.magkey {
+    padding-right: 115px;
+}
+
+.page {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 42px;
+    width: 100%;
+}
+
+.page span {
+    display: block;
+    width: 15px;
+    float: right;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}

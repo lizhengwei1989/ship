@@ -1,0 +1,436 @@
+<!-- 右侧页面 -->
+<div class="uflow5_indexright_box">
+    <div class="right_div_head"><a href="javascript:;">派车</a> &gt; <a href="javascript:;">回车登记</a></div>
+    <div class="uflow5_indexright" id="right_div">
+        <!-- 动作按钮条 -->
+        <div class="top_button clearfix">
+            <div class="w960 bc ">
+                <h3 class="TitleAll fl">
+                    <span class="blue mr5">发货单号：</span>
+                    <span class="ml10 f14 mt10" ng-bind="backsendList.vehicleDispatchNo"></span>
+                </h3>
+                <!-- 左侧按钮 -->
+                <!--  <p id="top_button_left" class="fl">
+                            </p> -->
+                <!-- 右侧按钮 -->
+                <p id="top_button_right" class="fr">
+                    <a href="javascript:void(0)" id="tb_submit" title="提交" class="smit">确定回车</a>
+                </p>
+            </div>
+        </div>
+        <!-- 流转路线条 -->
+        <!-- <div id="transitionContainer" class="top_button_nr clearfix">
+                        <ul>
+                            <li class="fl"><span class="liHover">派车单</span></li>
+                            <li class="fl"><span>创建发货单（<i>3</i>）</span></li>
+                            <li class="fl"><span>拒签（<i>3</i>）</span></li>
+                        </ul>
+                    </div> -->
+        <div class="sendCont">
+            <!-- 派车单 -->
+            <div class="center" style="top: 10px;">
+                <!--表单、底部按钮 -->
+                <div class="border01 bg_grey handprocess">
+                    <!-- 表单 -->
+                    <form id="uflowForm" novalidate="novalidate">
+                        <!-- SheetDiv_基础信息 -->
+                        <div class="handprocess_order" id="">
+                            <h3 class="pr">基础信息</h3>
+                            <div id="anchor_基础信息"></div>
+                            <ul class="clearfix" style="position: relative; z-index: 300;">
+                                <li id="field_station_id" class="li_form uic_form_select" style="width: 308px;">
+                                    <label class="authoritylab " for="station_id">标题：</label>
+                                    <p style="width:154px" ng-bind="backsendList.title"></p>
+                                    <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                                        <ul>
+                                            <li class="licheck" infinityname="飞象速达" infinityid="16"><i>飞象速达</i></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="field_station_id" class="li_form uic_form_select" style="width: 308px;">
+                                    <label class="authoritylab " for="station_id">服务站：</label>
+                                    <p style="width:154px" ng-bind="backsendList.serviceStationName"></p>
+                                    <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                                        <ul>
+                                            <li class="licheck" infinityname="飞象速达" infinityid="16"><i>飞象速达</i></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="field_order_create" class="li_form uic_form_date" style="width: 308px;">
+                                    <label class="authoritylab " for="order_create">创建时间：</label>
+                                    <p style="width:154px" ng-bind="backsendList.createTime"></p>
+                                </li>
+                                <li id="field_order_source" class="li_form uic_form_select" style="width: 308px;">
+                                    <label class="authoritylab " for="order_source">班次：</label>
+                                    <p style="width:154px" ng-bind="backsendList.serviceLineSn"></p>
+                                    <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                                        <ul>
+                                            <li infinityname="优汽在线订单" infinityid="1"><i>优汽在线订单</i></li>
+                                            <li class="licheck" infinityname="本站自收订单" infinityid="2"><i>本站自收订单</i></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="field_order_source" class="li_form uic_form_select" style="width: 308px;">
+                                    <label class="authoritylab " for="order_source">配送路线：</label>
+                                    <p style="width:154px" ng-bind="backsendList.serviceLineName"></p>
+                                    <div class="uicSelectData" style="max-height:254px;width:308px;display:none;">
+                                        <ul>
+                                            <li infinityname="优汽在线订单" infinityid="1"><i>优汽在线订单</i></li>
+                                            <li class="licheck" infinityname="本站自收订单" infinityid="2"><i>本站自收订单</i></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 车辆信息 -->
+                        <div class="handprocess_order">
+                            <h3 class="pr">车辆信息</h3>
+                            <div id="anchor_车辆信息"></div>
+                            <ul class="clearfix" style="position: relative; z-index: 295;">
+                                <li id="field_consigner_id" class="li_form uflow_searchtype" resids="16730" style="width: 308px;">
+                                    <label class="authoritylab " for="consigner_id">配送员：</label>
+                                    <p style="width:154px" ng-bind="backsendList.driverName"></p>
+                                </li>
+                                <li id="field_consigner_mobile" class="li_form" style="width: 308px;">
+                                    <label for="consigner_mobile">联系电话：</label>
+                                    <p style="width: 154px;" ng-bind="backsendList.phone"></p>
+                                </li>
+                                <li id="field_consigner" class="li_form" style="width: 308px;">
+                                    <label for="consigner">车牌号：</label>
+                                    <p style="width: 154px;" ng-bind="backsendList.plateNumber"></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 发货单 -->
+                        <div class="handprocess_order">
+                            <h3 class="pr">发货单</h3>
+                            <div id="anchor_发货单" class="goodsBtn">
+                                <a style="width:120px;" class="backBtn" href="javascript:;" ng-click="backaddsalebill()">添加发货单</a>
+                                <a style="width:120px;" class="backBtn" href="javascript:;" target="_blank" ui-sref="main.receive.new">创建发货单</a>
+                            </div>
+                            <div style="" class="advancedSearch">
+                                <div id="allQuery_search_div" style="">
+                                    <ul class="clearfix">
+                                        <li class="advancedSearch_li uic_form_select" id="searchCon_stationId" style="position: relative; z-index: 10300;">
+                                            <span class="authoritylab  editableLabel">发货单总数:</span>
+                                            <i class="selectDiv">10</i>
+                                        </li>
+                                        <li class="advancedSearch_li" id="searchCon_dispatchSn" style="position: relative; z-index: 298;">
+                                            <span class="editableLabel">客户总数:</span>
+                                            <i class="selectDiv">6</i>
+                                        </li>
+                                    </ul>
+                                    <ul class="clearfix">
+                                        <li class="advancedSearch_li uic_form_select" id="searchCon_stationId" style="position: relative; z-index: 10300;">
+                                            <span class="authoritylab  editableLabel">应收货款共:</span>
+                                            <i class="selectDiv">¥ 200.00</i>
+                                        </li>
+                                        <li class="advancedSearch_li" id="searchCon_dispatchSn" style="position: relative; z-index: 298;">
+                                            <span class="editableLabel">应收运费共:</span>
+                                            <i class="selectDiv">¥ 20.00</i>
+                                        </li>
+                                        <li class="advancedSearch_li" id="searchCon_dispatchSn" style="position: relative; z-index: 298;font-weight:bold">
+                                            <span class="editableLabel">配送员应收共:</span>
+                                            <i class="selectDiv">¥ 20.00</i>
+                                        </li>
+                                    </ul>
+                                    <div class="form_table clearfix" style="position: relative; z-index: 293;">
+                                        <table width="100%" cellspacing="0" border="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>序号</th>
+                                                    <th>发货单/日期</th>
+                                                    <th>应收收款</th>
+                                                    <th>件数</th>
+                                                    <th>应收运费</th>
+                                                    <th>应收金额</th>
+                                                    <th>平账金额</th>
+                                                    <th>平账类型</th>
+                                                    <th>备注</th>
+                                                    <th>操作记录</th>
+                                                    <th>状态</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="backDL in backtable">
+                                                    <td>
+                                                        <p>{{$index+1}}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>
+                                                            <a ui-sref="seeWaybill" class="blue db" href="javascript:;" target="_blank" ng-bind="backDL.numbers"></a>
+                                                            <span ng-bind="backDL.createTime"></span>
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <p ng-bind="backDL.collectionDelivery"></p>
+                                                    </td>
+                                                    <td>
+                                                        <p ng-bind="backDL.goodsNumber"></p>
+                                                    </td>
+                                                    <td>
+                                                        <p ng-bind="backDL.freightCharge"></p>
+                                                    </td>
+                                                    <td>
+                                                        <p ng-bind="balancebackDL({{backDL}})"></p>
+                                                    </td>
+                                                    <td>
+                                                        <p ng-bind="bmoneybackDL(backDL.balancingPoList)"></p>
+                                                    </td>
+                                                    <td>
+                                                        <p ng-bind="backDL.balancingPoList[0].btype"></p>
+                                                    </td>
+                                                    <td>
+                                                        <p ng-bind="backRcomment(backDL.balancingPoList)"></p>
+                                                    </td>
+                                                    <td>
+                                                        <p ng-bind="backsRecord(backDL.balancingPoList)"></p>
+                                                    </td>
+                                                    <td>
+                                                        <p ng-bind="backDL.receivingStatus"></p>
+                                                    </td>
+                                                    <td>
+                                                        <a class="backBtn" href="javascript:;" ng-click="backpingBtn()">平账</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="advancedSearch_btn">
+                                        <input id="advancedSearch_btn" class="submit" type="button" value="确定回车">
+                                        <!-- <input id="reset_btn" class="submit" type="button" value="重置"> -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 流转日志 -->
+                        <div class="border01 bg_grey handprocess_daily">
+                            <h2>流转日志</h2>
+                            <table width="100%" class="tabelnoborder">
+                                <tbody>
+                                    <tr>
+                                        <td width="30%" valign="top">2016-10-26 14:29</td>
+                                        <td><a class="operatorTip" phone="15515732266" email="null">张小飞</a>发起工单，原因：<span>XXXX</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <!--按钮组-->
+                    <!-- <div class="handprocess_btngroup" id="bottom_button">
+                                 <input type="button" class="orange_btn33 cp" onmouseover="this.className='orange_btn33_hover cp'" onmouseout="this.className='orange_btn33 cp'" onClick="_submitProcess();" value="提交" />
+                                  <input type="button" class="grey_btn33 cp" onClick="_saveDraft();" value="保存草稿" />
+                                <input type="button" value="提交" class="orange_btn33 cp">
+                            </div> -->
+                </div>
+                <!--锚点-->
+                <div id="anchorDiv" class="body_right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 平账弹出框 -->
+<div id="dialog-recevieDialog_window" class="dialogbox" style="width: 100%;height:100%;z-index:999999;position:fixed;top:0;left:0;" ng-show="backPing">
+    <div class="dialogbg" style="width:100%; height: 100%; filter: Alpha(opacity=20); background: #000; opacity: 0.2">
+    </div>
+    <dl class="incomingMsg">
+        <dd class="incomingTitle">
+            <span>呼入信息</span>
+            <i class="incomingNews fr" ng-click="backpingCancel()">X</i>
+        </dd>
+        <dt class="incomingTel">
+            <span>发货单号:</span>
+            <b></b>
+        </dt>
+        <dt class="incomingName">
+            <span>平账对象:</span>
+            <input type="radio" name="objects"> 代收货款&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="objects"> 运费
+        </dt>
+        <dt style="position:relative;">
+            <div class="incomingadd"></div>
+        </dt>
+        <dt class="incomings">
+            <div class="incomingName">
+                <span>平账金额：</span>
+                <input type="text" name="">
+            </div>
+            <div class="incomingName">
+                <span>平账类型：</span>
+                <select>
+                    <option>请选择</option>
+                    <option>代收款多收</option>
+                    <option>代收款变更</option>
+                    <option>代收款未收</option>
+                    <option>结账欠款</option>
+                </select>
+            </div>
+        </dt>
+        <dt class="incomings">
+            <div class="incomingName">
+                <span>平账金额：</span>
+                <input type="text" name="">
+            </div>
+            <div class="incomingName">
+                <span>平账类型：</span>
+                <select>
+                    <option>请选择</option>
+                    <option>代收款多收</option>
+                    <option>代收款变更</option>
+                    <option>代收款未收</option>
+                    <option>结账欠款</option>
+                </select>
+            </div>
+        </dt>
+        <dt style="position:relative;">
+            <div class="incomingdel"></div>
+        </dt>
+        <dt class="incomingList">
+            <a>
+                <input type="button" value="提交" class="apply_call">
+            </a>
+            <input type="button" value="取消" class="cancel_call" ng-click="backpingCancel()">
+        </dt>
+    </dl>
+    <!-- <dl class="incomingGet">
+        <dd class="incomingTitle">
+            <span>呼入信息</span>
+        </dd>
+        <dt class="incomingTel">
+            <span>发货单号：</span>
+            <b>XXXXXX</b>
+        </dt>
+        <dt class="incomingTel">
+            <span>应收货款：</span>
+            <b>10</b>
+        </dt>
+        <dt class="incomingTel">
+            <span>应收运费：</span>
+            <b>110</b>
+        </dt>
+        <dt class="incomingTel">
+            <span>实收金额：</span>
+            <b>110</b>
+        </dt>
+        <dt class="incomingList">
+            <a>
+                <input type="button" value="提交" class="apply_call">
+            </a>
+            <input type="button" value="取消" class="cancel_call">
+        </dt>
+    </dl> -->
+</div>
+<!--选择发货单弹出框-->
+<div id="dialog-recevieDialog_window" class="dialogbox" style="width: 100%;height:100%;z-index:999999;position:fixed;top:0;left:0;" ng-show="backCar">
+    <div class="dialogbg" style="width:100%; height: 100%; filter: Alpha(opacity=20); background: #000; opacity: 0.2">
+    </div>
+    <div id="recevieDialog" class="dialog_message_box" style="width: 800px; height: 400px; position: fixed; left: 274.5px; top: 133.5px; opacity: 1;">
+        <div class="dialog_message_title" style="padding: 0px 5px;">
+            <h4>选择收货单</h4>
+            <a href="javascript:void(0)" class="dialog_close" title="关闭"></a>
+        </div>
+        <div class="dialog_message_content" style="overflow: scroll; padding: 0px 5px; height: 335px;">
+            <li class="clearfix">
+                <div style="padding: 5px; width: 250px; display: block;" class="moc-li-div uic_form_select">
+                    <label class="authoritylab  editableLabel" for="lineSelect" style="width: 60px;">其他线路：</label>
+                    <div class="selectDiv" hidetype="false">
+                        <input name="lineSelect" readonly="true" style="width:146px" class="authorityInp uicSelectInp" value="" infinityid="149">
+                        <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;"></a>
+                        <div class="uicSelectData" style="max-height: 254px; width: 156px; display: none;">
+                            <ul>
+                                <li infinityname="姚桥 东区" infinityid="148">
+                                    <i>姚桥 东区</i>
+                                </li>
+                                <li infinityname="西北" infinityid="149" class="licheck">
+                                    <i>西北</i>
+                                </li>
+                                <li infinityname="西南" infinityid="150">
+                                    <i>西南</i>
+                                </li>
+                                <li infinityname="飞象返货线" infinityid="154">
+                                    <i>飞象返货线</i>
+                                </li>
+                                <li infinityname="西南长江路" infinityid="165">
+                                    <i>西南长江路</i>
+                                </li>
+                                <li infinityname="高新区" infinityid="167">
+                                    <i>高新区</i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 5px;width:250px" class="moc-li-div">
+                    <label for="orderSnForSearch" class="editableLabel" style="width: 60px;">收货单号：</label>
+                    <input id="orderSnForSearch" name="orderSnForSearch" type="text" class="InpText f12" maxlength="256" style="width: 146px;">
+                </div>
+                <div style="padding: 5px; width: 240px; display: block;" class="moc-li-div uic_form_select">
+                    <label class="authoritylab  editableLabel" for="lineSelect" style="width: 60px;">是否派车：</label>
+                    <div class="selectDiv">
+                        <input name="lineSelect" readonly="true" style="width:146px" class="authorityInp uicSelectInp" value="" infinityid="">
+                        <a class="uicSelectMore" href="javascript:void(0);" style="display: inline;"></a>
+                        <div class="uicSelectData" style="max-height:254px;width:156px">
+                            <ul>
+                                <li infinityname="未派车" infinityid="0">
+                                    <i>未派车</i>
+                                </li>
+                                <li infinityname="已派车" infinityid="1">
+                                    <i>已派车</i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div style="padding: 5px;width:250px;" class="moc-li-div">
+                    <label for="receiveForSearch" class="editableLabel" style="width: 60px;">收货方：</label>
+                    <input id="receiveForSearch" name="receiveForSearch" type="text" class="InpText f12" maxlength="256" style="width: 146px;">
+                </div>
+                <div style="padding: 5px;width:250px;" class="moc-li-div">
+                    <label for="consignerForSearch" class="editableLabel" style="width: 60px;">发货方：</label>
+                    <input id="consignerForSearch" name="consignerForSearch" type="text" class="InpText f12" maxlength="256" style="width: 146px;">
+                </div>
+                <div style="padding: 5px;width:240px;" class="moc-li-div">
+                    <label for="consignerForSearch" class="editableLabel" style="width: 60px;">班次：</label>
+                    <input id="consignerForSearch" name="consignerForSearch" type="text" class="InpText f12" maxlength="256" style="width: 146px;">
+                </div>
+            </li>
+            <table class="table" cellpadding="0" cellspacing="0" width="100%" style="width: 770px;">
+                <tbody>
+                    <tr>
+                        <th width="3%">
+                            <input name="orderALL" type="checkbox">
+                        </th>
+                        <th width="14%">发货单号</th>
+                        <th width="15%">发货方</th>
+                        <th width="15%">收货方</th>
+                        <th width="15%">收货地址</th>
+                        <th width="13%">班次</th>
+                        <th width="8%">代收货款</th>
+                        <th width="10%">状态</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="order" type="checkbox" id="124975">
+                        </td>
+                        <td>
+                            <a style="text-decoration: none;" href="process.do?method=view&amp;processId=315738" target="_blank">SE000162016102500112</a></td>
+                        <td>忠诚汽配</td>
+                        <td>鹏海名车维修</td>
+                        <td>桐柏路西站路交叉口向北100米路东</td>
+                        <td>西北-16:30</td>
+                        <td>0</td>
+                        <td>未派车</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="dialog_button" style="padding: 0px 5px;">
+            <a href="javascript:void(0)" class="dialog_button_0">确定</a>
+            <a href="javascript:void(0)" class="dialog_button_1" ng-click="backcancel()">取消</a>
+        </div>
+    </div>
+</div>
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>

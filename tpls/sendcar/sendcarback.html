@@ -1,0 +1,192 @@
+<div class="uflow5_indexright_box">
+    <div class="right_div_head"><a href="javascript:;">派车</a> &gt; <a href="javascript:;">回车登记</a></div>
+    <div class="uflow5_indexright" id="right_div">
+        <!-- base需要放到head中 -->
+        <div id="ctable" cellpadding="0" cellspacing="0" border="0">
+            <div class="ultrapower-table-box">
+                <div class="operation" style="display: none;"></div>
+                <div class="showbody" style="min-height: 450px;">
+                    <div style="" class="advancedSearch">
+                        <div id="allQuery_search_div" style="">
+                            <ul class="clearfix">
+                                <li class="advancedSearch_li" style="width:300px; position: relative; z-index: 300;">
+                                    <label for="" class="editableLabel">派车单号：</label>
+                                    <input name="" type="text" class="InpText f12" maxlength="256" style="width: 196px;">
+                                </li>
+                                <li class="advancedSearch_li" id="searchCon_mobile" style="width:300px; position: relative; z-index: 300;">
+                                    <label for="mobile" class="editableLabel">司机电话：</label>
+                                    <input id="mobile" name="mobile" type="text" class="InpText f12" maxlength="256" style="width: 196px;">
+                                </li>
+                                <li class="advancedSearch_li" id="searchCon_account" style="width:300px; position: relative; z-index: 300;">
+                                    <label for="account" class="editableLabel">班车司机：</label>
+                                    <input id="account" name="account" type="text" class="InpText f12" maxlength="256" style="width: 196px;">
+                                </li>
+                                <li class="advancedSearch_li" style="width:300px; position: relative; z-index: 300;">
+                                    <label class="editableLabel">车牌号：</label>
+                                    <input name="" type="text" class="InpText f12" maxlength="256" style="width: 196px;">
+                                </li>
+                                <!-- <li class="advancedSearch_li uic_form_date" id="searchCon_date" style="width:300px; position: relative; z-index: 299;">
+                                                <label class="authoritylab  editableLabel" for="">发车日期：</label>
+                                                <div class="selectDiv">
+                                                    <input name="" value="" style="width:196px" class="authorityInp uicInpCalender InpCalender hasDatepicker" readonly="readonly" id="dp1477221494186">
+                                                    <a href="javascript:void(0);" class="calendar ui-datepicker-trigger" alt="点击查看" title="点击查看"></a>
+                                                </div>
+                                            </li> -->
+                                <li class="advancedSearch_li uic_form_select" id="searchCon_line_id" style="width:300px; position: relative; z-index: 300;">
+                                    <label class="authoritylab  editableLabel" for="lineId">线路：</label>
+                                    <div class="selectDiv">
+                                        <input name="lineId" readonly="true" style="width:196px" class="authorityInp uicSelectInp" value="" infinityid="">
+                                        <a class="uicSelectMore" href="javascript:void(0);"></a>
+                                        <div class="uicSelectData" style="max-height:254px;width:206px">
+                                            <ul>
+                                                <li infinityname="姚桥 东区" infinityid="148">
+                                                    <i>姚桥 东区</i>
+                                                </li>
+                                                <li infinityname="西北" infinityid="149">
+                                                    <i>西北</i>
+                                                </li>
+                                                <li infinityname="西南" infinityid="150">
+                                                    <i>西南</i>
+                                                </li>
+                                                <li infinityname="飞象返货线" infinityid="154">
+                                                    <i>飞象返货线</i>
+                                                </li>
+                                                <li infinityname="西南长江路" infinityid="165">
+                                                    <i>西南长江路</i>
+                                                </li>
+                                                <li infinityname="高新区" infinityid="167">
+                                                    <i>高新区</i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="advancedSearch_li uic_form_select" id="searchCon_lineSnId" style="width:300px; position: relative; z-index: 299;">
+                                    <label class="authoritylab  editableLabel" for="lineSnId">班次：</label>
+                                    <div class="selectDiv">
+                                        <input name="lineSnId" readonly="true" style="width:196px" class="authorityInp uicSelectInp" value="" infinityid="">
+                                        <a class="uicSelectMore" href="javascript:void(0);"></a>
+                                        <div class="uicSelectData" style="max-height:254px;width:206px">
+                                            <ul></ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="advancedSearch_btn">
+                                <input ng-click="backSearch()" id="advancedSearch_btn" class="submit" type="button" value="查询">
+                                <input id="reset_btn" class="submit" type="button" value="重置">
+                            </p>
+                        </div>
+                    </div>
+                    <table ng-show="backShow" class="showTable" cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                            <tr class="tit">
+                                <th level="0" infinity="100" leaf="0" rowspan="1">
+                                    <div style="width:69px">操作</div>
+                                </th>
+                                <th level="0" infinity="101" leaf="0" rowspan="1">
+                                    <div style="width:89px">
+                                        <span class="sort" numtype="string" sortcode="KEY_">派车单号</span>
+                                        <span></span>
+                                    </div>
+                                </th>
+                                <th level="0" infinity="102" leaf="0" rowspan="1">
+                                    <div style="width:104px">配送路线</div>
+                                </th>
+                                <th level="0" infinity="103" leaf="0" rowspan="1">
+                                    <div style="width:69px">班次</div>
+                                </th>
+                                <th level="0" infinity="104" leaf="0" rowspan="1">
+                                    <div style="width:69px">配送员</div>
+                                </th>
+                                <th level="0" infinity="105" leaf="0" rowspan="1">
+                                    <div style="width:69px">车牌号</div>
+                                </th>
+                                <th level="0" infinity="106" leaf="0" rowspan="1">
+                                    <div style="width:69px">联系电话</div>
+                                </th>
+                                <th class="thLast" level="0" infinity="107" leaf="0" rowspan="1">
+                                    <div style="width:69px">回车时间</div>
+                                </th>
+                                <th level="0" infinity="108" leaf="0" rowspan="1">
+                                    <div style="width:69px">状态</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="rowundefined" class="untrclick content" ng-repeat="backcar in backcarList">
+                                <td>
+                                    <a ui-sref="main.sendcar.backRegister" class="backBtn" href="javascript:;">登记</a>
+                                    <a ui-sref="main.sendcar.checkSend" class="backBtn" href="javascript:;">查看</a>
+                                </td>
+                                <td style="width:168px;">
+                                    <div class="uicNoClick" style="width:155px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan">
+                                                <a class="row_a" href="javascript:void(0);" ui-sref="main.sendcar.backRegister" target="_blank">
+                                                <font class="blue02">
+                                                  <b ng-bind="backcar.vehicleDispatchNo"></b>
+                                                </font>
+                                              </a>
+                                            </code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:197px;">
+                                    <div class="uicNoClick" style="width:184px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="backcar.serviceLineName"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:131px;">
+                                    <div class="uicNoClick" style="width:118px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="backcar.serviceLineSn"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:131px;">
+                                    <div class="uicNoClick" style="width:118px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="backcar.driverName"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:131px;">
+                                    <div class="uicNoClick" style="width:118px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="backcar.plateNumber"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="tdLast" style="width:131px;">
+                                    <div class="uicNoClick" style="width:118px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="backcar.phone"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:130px;">
+                                    <div class="uicNoClick" style="width:117px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="backcar.returnTime"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uicNoClick" style="width:117px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="backcar.currentStatus"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pages"></div>
+            </div>
+        </div>
+    </div>
+</div>

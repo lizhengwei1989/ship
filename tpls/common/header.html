@@ -1,0 +1,65 @@
+<div class="uflow5_header">
+    <div class="screen clearfix">
+        <div class="logo">
+            <a href="" style="background-image: url(&quot;images/logo.png&quot;);"></a>
+        </div>
+        <div class="nav_left">
+            <a class="receive_order11 sel" ui-sref="main.receive.new" ui-sref-active="sel">收货</a>
+            <a class="pie_car12" ui-sref="main.sendcar.new" ui-sref-active="sel">派车</a>
+            <a class="day_over13" href="javascript:void(0)">日结</a>
+            <a class="taocan14" href="javascript:void(0)">套餐</a>
+            <a class="site_manage15" href="javascript:void(0)">站点</a>
+            <a class="ld_ddt_statistics" href="javascript:void(0)">结算</a>
+            <a class="ld_ddt_sort" href="javascript:void(0)">统计</a>
+        </div>
+        <div class="nav_right clearfix">
+            <div class="online-phone fl">
+              <span class="ld_online_tit">在线客服</span>
+            <div class="softphone-bar-box" style="display: none;">
+                <div id="softphonebar" style="position: relative; ">
+                    <div class="barBox clearfix" id="callStatus">
+                        <div class="softphone_timer clearfix fr">
+                            <div id="softphonebar.peerState" class="fl softphonebar_peerState"></div>
+                            <div id="softphonebar.peerTimeState" class="peerTimeState fl">00:00:00</div>
+                        </div>
+                        <div class="call_btn_box clearfix fr">
+                            <div class="phoneing_btn ">
+                                <a href="#" class="DialEnable" id="DialEnable" style=""></a>
+                                <a href="#" class="DialDisable" id="DialDisable" style="display: none"></a>
+                            </div>
+                        </div>
+                        <div class="isIcallcenterBox fr clearfix">
+                            <a href="#" class="HangupEnable" id="HangupEnable" style="display: none" onclick="javascript:phone.hangup();"></a>
+                            <a href="#" class="HangupDisable" id="HangupDisable"></a>
+                            <a href="#" class="HoldEnable fl" id="HoldEnable" style="display: none" onclick="phone.hold();"></a>
+                            <a href="#" class="HoldDisable fl" id="HoldDisable"></a>
+                            <a href="#" class="HoldGetEnable fl" id="HoldGetEnable" style="display: none" onclick="phone.unhold();"></a>
+                            <a href="#" class="TransferEnable fl" id="TransferEnable" style="display: none" onclick="javascript:softphoneBar.toTransfer();"></a>
+                            <a href="#" class="TransferDisable fl" id="TransferDisable"></a>
+                            <a href="#" class="TransferEnable fl" id="ConsultTransferEnable" style="display: none" onclick="javascript:phone.transfer('912345','external', {})"></a>
+                            <a href="#" class="TransferDisable fl" id="ConsultTransferDisable" style="display: none"></a>
+                        </div>
+                        <input type="text" id="icallcenter.dialout.input" placeholder="输入手机号,按回车键拨打" value="输入手机号码" onfocus="if(value=='输入手机号码,回车拨打 ') {value=''}" onblur="if(value==''){value='输入手机号码,回车拨打 '}" class="inp1 fl" style="display: none;">
+                        <ul class=" peerStatus" id="peerStatus">
+                            <li class="stateIdleDisable stateBar">
+                                <a href="#" onclick="javascript:phone.setBusy(false,'0')">空闲</a></li>
+                            <li class="stateRestDisable stateBar">
+                                <a href="#" onclick="javascript:phone.setBusy(true,'2')">小休</a></li>
+                            <li class="stateBusyDisable stateBar">
+                                <a href="#" onclick="javascript:phone.setBusy(true,'1')">忙碌</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="netMessage"></div>
+                <iframe id="icallcenter.iframe" style="display: none"></iframe>
+            </div>
+            </div>
+            <div class="login-user fl">
+                <span class="ld_area">张三</span>
+                <div class="ld_setMes">
+                    <a href="javascript:;">修改密码</a>
+                    <a href="logout.do">注销</a></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,236 @@
+@charset "utf-8";
+.ultrapower-table-box {
+    font-family: '宋体'
+}
+
+.ultrapower-table-box .showTable th {
+    height: 32px;
+    line-height: 32px;
+    background: #E9ECF3;
+    font-weight: 800;
+    color: #000;
+    text-align: left;
+    box-shadow: none;
+    *+filter: none
+}
+
+.ultrapower-table-box .showTable th div {
+    display: inline-block;
+    *+display: inline;
+    *+zoom: 1;
+}
+
+.ultrapower-table-box .showTable .sort {
+    padding: 0 10px 0 0;
+}
+
+.ultrapower-table-box .showTable td {
+    padding: 5px
+}
+
+.backBtn {
+    display: inline-block;
+    width: 35px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #1a88d2;
+    border-radius: 4px;
+    color: #1a88d2;
+}
+
+.ultrapower-table-box .showTable input[type=checkbox] {
+    margin-top: 6px;
+    vertical-align: middle
+}
+
+
+/*是否委托*/
+
+.process_consign {
+    background: url(../images/processlist/icon_consign.png) no-repeat 0 3px
+}
+
+
+/*UIC-优先级状态*/
+
+.priority_lower {
+    background: url(../images/processlist/icon_lower.png) no-repeat 3px 3px
+}
+
+.priority_general {
+    background: url(../images/processlist/icon_general.png) no-repeat 3px 3px
+}
+
+.priority_import {
+    background: url(../images/processlist/icon_import.png) no-repeat 3px 3px
+}
+
+.priority_serious {
+    background: url(../images/processlist/icon_serious.png) no-repeat 3px 3px
+}
+
+.priority_emergency {
+    background: url(../images/processlist/icon_emergency.png) no-repeat 3px 3px
+}
+
+.time_nomal {
+    background: url(../images/processlist/icon_nomal.png) no-repeat 0 3px
+}
+
+.time_back {
+    background: url(../images/processlist/icon_back.png) no-repeat 0 3px
+}
+
+.time_timeout {
+    background: url(../images/processlist/icon_hastimeout.png) no-repeat 0 3px
+}
+
+.time_hastimeout {
+    background: url(../images/processlist/icon_timeout.png) no-repeat 0 3px
+}
+
+
+/*翻页*/
+
+.ultrapower-table-box .pages ul li label {
+    border-radius: 0
+}
+
+.ultrapower-table-box .pages ul li span {
+    border-radius: 0;
+    color: #FFF;
+    background: #0066cc;
+    border: 1px solid #005cb8;
+    width: 20px;
+}
+
+.ultrapower-table-box .pages ul li a {
+    border-radius: 0;
+    color: #0066cc
+}
+
+
+/*重置高级搜索查询*/
+
+.ultrapower-table-box .title {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 2px solid #d21111;
+    background: #fefefe;
+    text-indent: 10px;
+    color: #888;
+    display: none;
+}
+
+#allQuery_grid .operation {
+    position: relative;
+    margin-top: -30px;
+    width: auto;
+    background: none!important;
+    border: 0
+}
+
+.advancedSearch {
+    padding: 15px 0
+}
+
+.advancedSearch li.advancedSearch_li {
+    padding: 3px 0;
+    width: 45%;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+}
+
+.advancedSearch li.advancedSearch_li label {
+    width: 80px;
+    text-align: right;
+    display: inline-block;
+    *+width: 140px;
+    *+float: left;
+    vertical-align: middle;
+    line-height: 18px
+}
+
+.advancedSearch li.advancedSearch_li input.InpText {
+    *+float: left
+}
+
+.advancedSearch li.advancedSearch_li div.selectDivTree input.uicSelectInp {
+    *+float: left;
+}
+
+.advancedSearch li.advancedSearch_li div.selectDiv {
+    *+float: left;
+}
+
+.advancedSearch li.advancedSearch_li a.uicSelectMore,
+.advancedSearch li.advancedSearch_li a.calendar {
+    right: 0!important;
+}
+
+.advancedSearch li.advancedSearch_li a.uicSelectMore {
+    *+top: 0
+}
+
+.advancedSearch .advancedSearch_btn {
+    height: 30px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #CCC;
+}
+
+.advancedSearch .advancedSearch_btn input.submit {
+    border: 0;
+    background: url(../images/btn_search.png) no-repeat;
+    width: 133px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.advancedSearch .advancedSearch_btn input.input_btn {
+    display: none;
+}
+
+
+/*靠右的按钮（录入）*/
+
+.advancedSearch li.advancedSearch_li div.selectDivTree {
+    *+float: left!important;
+}
+
+
+/*搜索无结果*/
+
+.uflow5_nosearch {
+    background: url(../images/nosearch.png) no-repeat;
+    padding-left: 110px!important;
+    width: 290px!important;
+    height: 110px!important;
+    margin: 10px auto!important;
+    font-size: 14px!important;
+    color: #666!important;
+    font-weight: bold!important;
+    line-height: 110px!important;
+    text-align: left!important;
+}
+
+
+/*在修改的表单项上才显示错误信息*/
+
+input.ng-dirty.ng-invalid {
+    border: 1px solid red;
+}
+
+.prompt {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 150px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 990;
+}

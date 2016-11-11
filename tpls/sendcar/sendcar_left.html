@@ -1,0 +1,43 @@
+<div class="uflow5_indexleft">
+    <!-- 搜索条 -->
+    <p class="leftsearch" style="display: none;">
+        <input id="searchBox" class="grey" type="text" name="" value="按标题、编号搜索">
+        <a id="searchBox_button" href="javascript:void(0);" class="search_icon"></a>
+    </p>
+    <div id="searchTip" style="top:36px;left:5px; width:250px; display:none;z-index:200;word-break:break-all" class="auto_match">
+        <ul>
+            <li name="title" class="condition">
+                <b>标题：</b>
+                <font></font>
+            </li>
+            <li name="key" class="condition">
+                <b>编号：</b>
+                <font></font>
+            </li>
+            <span class="separation"></span>
+            <li name="">
+                <b>高级搜索</b>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧菜单 -->
+    <ul class="leftmenu">
+        <img class="markedImg" src="images/left_big12.png">
+        <li class="uplusmenu" ui-sref-active="sel">
+            <a ui-sref="main.sendcar.new" actionname="新建派车单">
+                <i class="fa"></i>&nbsp;&nbsp;新建派车单</a>
+        </li>
+        <li class="uplusmenu" ui-sref-active="sel">
+            <a ui-sref="main.sendcar.check" actionname="派车单查询">
+                <i class="fa"></i>&nbsp;&nbsp;派车单查询</a>
+        </li>
+        <li class="uplusmenu" ui-sref-active="sel">
+            <a ui-sref="main.sendcar.back" actionname="回车登记">
+                <i class="fa"></i>&nbsp;&nbsp;回车登记</a>
+        </li>
+        <li class="uplusmenu" ui-sref-active="sel">
+            <a ui-sref="main.sendcar.cash" actionname="站点财务收款">
+                <i class="fa myorder"></i>&nbsp;&nbsp;站点财务收款</a>
+        </li>
+    </ul>
+</div>

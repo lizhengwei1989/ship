@@ -1,0 +1,275 @@
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/ui-bootstrap-csp.css">
+<style type="text/css">
+a {
+    color: #333;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    margin-bottom: 0;
+}
+</style>
+<div class="uflow5_indexright_box">
+    <div class="right_div_head"><a href="javascript:;">派车</a> &gt; <a href="javascript:;">查看派车单</a></div>
+    <div class="uflow5_indexright" id="right_div">
+        <div id="allQuery_grid" cellpadding="0" cellspacing="0" border="0">
+            <div class="ultrapower-table-box">
+                <strong class="title">派车单查询</strong>
+                <div class="operation" style="display: none;"></div>
+                <div class="showbody" style="min-height: 450px;">
+                    <div style="" class="advancedSearch">
+                        <div id="allQuery_search_div" style="">
+                            <ul class="clearfix">
+                                <li class="advancedSearch_li uic_form_select" id="searchCon_stationId" style="position: relative; z-index: 10300;">
+                                    <label class="authoritylab  editableLabel" for="serveCheckId">服务站：</label>
+                                    <div class="selectDiv" hidetype="false">
+                                        <input id="serveCheckId" name="" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" ng-model="serveCheckList.name" ng-bind="serveCheck(serveCheckList)">
+                                        <!-- <a class="uicSelectMore" href="javascript:void(0);"></a> -->
+                                        <!-- <div class="uicSelectData" style="max-height:254px;width:256px">
+                                            <ul>
+                                                <li infinityname="飞象速达" infinityid="16">
+                                                    <i>飞象速达</i>
+                                                </li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                </li>
+                                <li class="advancedSearch_li uic_form_date" id="searchCon_createTime" style="position: relative; z-index: 299;">
+                                    <label class="authoritylab  editableLabel" for="">创建时间：</label>
+                                    <div class="selectDiv" style="width:250px;">
+                                        <div class="input-group">
+                                            <input id="creationTime" type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dat" is-open="popup1.opened" ng-required="true" close-text="关闭" 30 clear-text="清空" current-text="今天" alt-input-formats="altInputFormats" readonly="true" />
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="open1()">
+                                                    <i class="glyphicon glyphicon-calendar">时间</i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="advancedSearch_li" id="searchCon_dispatchSn" style="position: relative; z-index: 298;">
+                                    <label for="dispatchSn" class="editableLabel">派车单号：</label>
+                                    <input id="dispatchSn" name="dispatchSn" type="text" class="InpText f12" style="width: 246px;" ng-model="sendNumber">
+                                </li>
+                                <li class="advancedSearch_li uic_form_select" id="searchCon_status">
+                                    <label class="authoritylab  editableLabel" for="source">派车单状态：</label>
+                                    <div class="selectDiv" hidetype="false">
+                                        <input id="source" name="" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" ng-model="sendStateTxt">
+                                        <a ng-click="sendStateBtn()" class="uicSelectMore" href="javascript:void(0);"></a>
+                                        <div id="sendState" ng-show="sendState" class="uicSelectData" style="max-height:254px;width:256px">
+                                            <ul>
+                                                <li>
+                                                    <i>已发车</i>
+                                                </li>
+                                                <li>
+                                                    <i>已回车</i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="advancedSearch_li" id="searchCon_dispatcherName">
+                                    <label for="dispatcherName" class="editableLabel">班车司机：</label>
+                                    <input id="dispatcherName" name="" type="text" class="InpText f12" style="width: 246px;" ng-model="dispatcherName">
+                                </li>
+                                <li class="advancedSearch_li" id="searchCon_dispatcherMobile">
+                                    <label for="dispatcherMobile" class="editableLabel">司机电话：</label>
+                                    <input id="dispatcherMobile" name="" type="text" class="InpText f12" style="width: 246px;" ng-model="dispatcherMobile">
+                                </li>
+                                <li class="advancedSearch_li" id="searchCon_dispatcherPlate">
+                                    <label for="dispatcherPlate" class="editableLabel">车牌号：</label>
+                                    <input id="dispatcherPlate" name="" type="text" class="InpText f12" style="width: 246px;" ng-model="dispatcherPlate">
+                                </li>
+                                <li class="advancedSearch_li uic_form_select" id="searchCon_lineSnId">
+                                    <label class="authoritylab  editableLabel" for="lineSnId">班次：</label>
+                                    <div class="selectDiv">
+                                        <input id="lineSnId" name="" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" ng-model="classTxt">
+                                        <a class="uicSelectMore" href="javascript:void(0);" ng-click="classSelect()"></a>
+                                        <div id="classShow" ng-show="classShow" class="uicSelectData" style="max-height:254px;width:256px">
+                                            <ul>
+                                                <li ng-repeat="classes in classList">
+                                                    <i ng-bind="classes.runTime" ng-click="classBtn(classes)"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="advancedSearch_li uic_form_select" id="searchCon_line_id">
+                                    <label class="authoritylab  editableLabel" for="checkPathTxt">线路：</label>
+                                    <div class="selectDiv">
+                                        <input id="checkPathTxt" name="" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" ng-model="checkPathTxt">
+                                        <a class="uicSelectMore" href="javascript:void(0);" ng-click="checkPathSelect()"></a>
+                                        <div id="checkPathShow" ng-show="checkPathShow" class="uicSelectData" style="max-height:254px;width:256px">
+                                            <ul>
+                                                <li ng-repeat="checkPath in checkPathList">
+                                                    <i ng-bind="checkPath.lineName" ng-click="checkPathBtn(checkPath)"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="advancedSearch_li" id="searchCon_dispatchSn" style="position: relative; z-index: 298;">
+                                    <label for="deliverSn" class="editableLabel">发货单号：</label>
+                                    <input id="deliverSn" name="" type="text" class="InpText f12" style="width: 246px;" ng-model="deliverNumber">
+                                </li>
+                            </ul>
+                            <p class="advancedSearch_btn">
+                                <input ng-click="advancedSearchBtn()" id="advancedSearchBtn" class="submit" type="button" value="查询">
+                                <input id="reset_btn" class="submit" type="button" value="重置">
+                            </p>
+                        </div>
+                    </div>
+                    <table ng-show="tableCheck" class="showTable" cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                            <tr class="tit">
+                                <th level="0" infinity="101" leaf="0" rowspan="1">
+                                    <div style="width:99px">服务站</div>
+                                </th>
+                                <th level="0" infinity="102" leaf="0" rowspan="1">
+                                    <div style="width:141.85px">创建时间</div>
+                                </th>
+                                <th level="0" infinity="103" leaf="0" rowspan="1">
+                                    <div style="width:90.9px">派车单号</div>
+                                </th>
+                                <th level="0" infinity="104" leaf="0" rowspan="1">
+                                    <div style="width:90.9px">配送路线</div>
+                                </th>
+                                <th level="0" infinity="105" leaf="0" rowspan="1">
+                                    <div style="width:90.9px">班次</div>
+                                </th>
+                                <th level="0" infinity="106" leaf="0" rowspan="1">
+                                    <div style="width:90.9px">配送员</div>
+                                </th>
+                                <th level="0" infinity="107" leaf="0" rowspan="1">
+                                    <div style="width:90.9px">联系电话</div>
+                                </th>
+                                <th level="0" infinity="108" leaf="0" rowspan="1">
+                                    <div style="width:90.9px">客户数</div>
+                                </th>
+                                <th level="0" infinity="109" leaf="0" rowspan="1">
+                                    <div style="width:90.9px">收货单数</div>
+                                </th>
+                                <th class="thLast" level="0" infinity="110" leaf="0" rowspan="1">
+                                    <div style="width:90.9px">状态</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-class="{gary:$odd}" class="untrclick content" ng-repeat="tables in tableList">
+                                <td style="width:104px;" code="stationName">
+                                    <div class="uicNoClick" style="width:91px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="tables.serviceLineName"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:95px;" code="entryTime">
+                                    <div class="uicNoClick" style="width:82px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="tables.createTime"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:149px;" code="dispatchSn">
+                                    <div class="uicNoClick" style="width:136px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan">
+                                              <a ui-sref="main.sendcar.checkSend" class="row_a" href="javascript:;" >
+                                                <font class="blue02">
+                                                  <b ng-bind="tables.vehicleDispatchNo"></b>
+                                                </font>
+                                              </a>
+                                            </code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:95px;" code="lineName">
+                                    <div class="uicNoClick" style="width:82px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="tables.serviceStationName"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:96px;" code="lineSnName">
+                                    <div class="uicNoClick" style="width:83px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="tables.serviceLineSn"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:96px;">
+                                    <div class="uicNoClick" style="width:83px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="tables.driverName"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:96px;">
+                                    <div class="uicNoClick" style="width:83px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="tables.phone"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:96px;" code="customerNumber">
+                                    <div class="uicNoClick" style="width:83px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="tables.dbCount"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td style="width:96px;" code="detailsNumber">
+                                    <div class="uicNoClick" style="width:83px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="tables.clientCount"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="tdLast" style="width:96px;" code="dispatchStatusValue">
+                                    <div class="uicNoClick" style="width:83px;text-align:left">
+                                        <span>
+                                            <code class="codeSpan" ng-bind="tables.currentStatus"></code>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- <div class="pages">
+                    <ul class="pageUl ">
+                        <li>
+                            <label class="fristPage" style="cursor:default;background:none repeat scroll 0 0 #F1F1F1;border:1px solid #CCCCCC">上一页</label>
+                        </li>
+                        <li>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <span>1</span></li>
+                                    <li>
+                                        <a href="javascript:;;">2</a></li>
+                                    <li>
+                                        <a href="javascript:;;">3</a></li>
+                                    <li>...</li>
+                                    <li>
+                                        <a href="javascript:;;">6</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="endPage">下一页</label>
+                        </li>
+                        <li>
+                            <em>共48条数据</em></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

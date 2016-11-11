@@ -1,0 +1,632 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/*label样式*/
+
+label {
+    display: inline-block;
+}
+
+label.readLabel {
+    color: #888;
+}
+
+label.editableLabel {
+    color: #666;
+}
+
+
+/*validate错误提示样式*/
+
+span.formFieldError {
+    background: url(../images/validate_error.png) no-repeat;
+    display: inline-block;
+    float: right;
+    height: 16px;
+    width: 16px;
+    margin-top: 2px;
+    *+margin-top: -18px;
+}
+
+
+/*背景图标样式*/
+
+a.ImageClass {
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: right;
+    margin: 3px;
+}
+
+
+/*input[type=text]*/
+
+input[type=text] {
+    line-height: 18px;
+    font-family: arial, '宋体';
+}
+
+input.InpText {
+    border: 1px solid #CCC;
+    background: #FFF;
+    height: 30px;
+    padding: 0 5px;
+}
+
+input.InpTextError {
+    border: 1px solid #f70000;
+    background: #fbe7e7;
+    height: 20px;
+    padding: 0 5px;
+}
+
+input.InpTextSucess {
+    border: 1px solid #ff9900;
+    background: #FFF;
+    height: 20px;
+    padding: 0 5px
+}
+
+
+/*input[type=checkbox]*/
+
+input[type=checkbox] {
+    border: 0;
+    background: none;
+}
+
+input.InpCheckbox {
+    margin: 0 5px
+}
+
+
+/*input[type=radio]*/
+
+input[type=radio] {
+    border: 0;
+    background: none;
+    font-size: 14px;
+}
+
+input.InpRadio {
+    margin: 0 5px
+}
+
+
+/*textarea*/
+
+textarea {
+    font-size: 12px;
+    resize: none;
+    overflow-y: auto;
+}
+
+textarea.Textarea {
+    border: 1px solid #CCC;
+    background: #FFF;
+    height: 100px;
+    line-height: 20px;
+    padding: 0 5px;
+}
+
+textarea.TextareaError {
+    border: 1px solid #f70000;
+    background: #fbe7e7;
+    height: 100px;
+    line-height: 20px;
+    padding: 0 5px;
+}
+
+textarea.TextareaSuccess {
+    border: 1px solid #ff9900;
+    background: #FFF;
+    height: 100px;
+    line-height: 20px;
+    padding: 0 5px;
+}
+
+
+/**文本域，只读换行**/
+
+pre.pre {
+    margin: 0px;
+    white-space: pre-wrap;
+    /* css3.0 */
+    white-space: -moz-pre-wrap;
+    /* Firefox */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+    font-family: Arial, "宋体";
+}
+
+
+/*选择日期样式*/
+
+.selectDiv {
+    display: inline-block;
+    position: relative;
+    height: 32px;
+}
+
+.selectDiv .uicInpCalender {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #CCC;
+    background: #FFF;
+    height: 30px;
+    padding: 0 5px;
+}
+
+.selectDiv .uicInpCalenderError {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #f70000;
+    background: #fbe7e7;
+    height: 20px;
+    padding: 0 5px;
+}
+
+.selectDiv .uicInpCalenderSucess {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #ff9900;
+    background: #FFF;
+    height: 20px;
+    padding: 0 5px;
+}
+
+.selectDiv a.calendar {
+    position: absolute;
+    background: url(../images/formImages/calender/calendar-day.png) no-repeat right 0;
+    width: 22px;
+    height: 21px;
+    display: block;
+    right: 0;
+    top: 0;
+    *+top: 1px;
+}
+
+
+/*模拟下拉列表样式*/
+
+.selectDiv .uicSelectInp {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #CCC;
+    background: #FFF;
+    height: 30px;
+    padding: 0 5px;
+}
+
+.selectDiv .uicSelectInpError {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #f70000;
+    background: #fbe7e7;
+    height: 20px;
+    padding: 0 5px;
+}
+
+.selectDiv a.uicSelectMore {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    background: url(../images/ms_ico2.png) no-repeat 1px 0;
+    display: block;
+    right: 0;
+    top: 0px;
+    *+right: 22px;
+    *+top: 1px;
+}
+
+
+/*选人样式*/
+
+.selectDiv .InpSelectPerson {
+    border: 1px solid #CCC;
+    background: #FFF;
+    height: 20px;
+    padding: 0 5px
+}
+
+.selectDiv a.SelectPerson {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: url(../images/formImages/selecte/person_ico.png) no-repeat 0 0;
+    display: block;
+    right: 0;
+    top: 0px
+}
+
+
+/*待处理工单选人样式*/
+
+.selectDIV_person {
+    background: #FFF;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    border: 1px solid #CCC;
+    padding: 0 5px;
+}
+
+.selectDIV_personError {
+    border: 1px solid #f70000;
+    background: #fbe7e7;
+    height: 20px;
+    padding: 0 5px
+}
+
+.selectDIV_person a.uicUserMore {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    background: url(../images/formImages/selecte/person_ico.png) no-repeat 0 0;
+    display: block;
+    right: -1px;
+    top: -1px;
+    z-index: 100;
+}
+
+
+/*待处理工单选人图标 鼠标停留样式*/
+
+.selectDIV_person a.uicUserMore:hover {
+    background: url(../images/formImages/selecte/person_ico.png) no-repeat 0 0;
+}
+
+.uicAreaUl li.uicAreaInp input {
+    padding: 0;
+    margin: 0;
+    height: 20px
+}
+
+.search_box .pag {
+    line-height: 30px!important;
+}
+
+.search_box .paging_frist,
+.search_box .paging_last,
+.search_box .paging_pre,
+.search_box .paging_next {
+    width: 16px;
+    height: 30px;
+    padding: 0
+}
+
+
+/*覆盖UIC下拉列表框样式*/
+
+.selectDiv .uicSelectData {
+    border-radius: 0;
+    box-shadow: none;
+    background: #FFF;
+    position: absolute;
+    z-index: 9999;
+    min-height: 50px;
+    margin-top: 10px;
+}
+
+.selectDiv .uicSelectData ul li {
+    height: 22px;
+    line-height: 22px;
+    padding: 0 0 3px 0
+}
+
+.selectDiv .uicSelectData ul li i {
+    font-style: normal;
+    display: block;
+    text-align: left
+}
+
+
+/*选人列表样式覆盖*/
+
+.selectDIV_person .uicAreaSelect {}
+
+.selectDIV_person .uicSelectData {
+    border-radius: 0;
+    box-shadow: none;
+    background: #FFF;
+    z-index: 999
+}
+
+.selectDIV_person .uicSelectData ul li {
+    height: 22px;
+    line-height: 22px;
+    padding: 0 0 3px 0;
+    text-align: left;
+}
+
+.selectDIV_person .uicSelectData ul li i {
+    font-style: normal;
+    margin-left: 10px;
+    line-height: 22px;
+    color: #333;
+}
+
+
+/*处理工单页模拟下拉列表样式*/
+
+.uicSelectDataTree {
+    background: #FFF;
+}
+
+.selectDIV_person .search_box {
+    border-top: 1px solid #bababa;
+    width: 100%;
+    filter: progid: DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#fcfcfc, endColorStr=#f4f4f4);
+    background: -ms-linear-gradient(top, #fcfcfc, #f4f4f4);
+    /* IE10+ */
+    background: -moz-linear-gradient(top, #fcfcfc, #f4f4f4);
+    background: -webkit-linear-gradient(top, #fcfcfc, #f4f4f4);
+    background: -o-linear-gradient(top, #fcfcfc, #f4f4f4);
+}
+
+
+/*快捷方式*/
+
+.quickway {
+    position: relative;
+}
+
+.quickway_text {
+    position: absolute;
+    right: 0px;
+    bottom: 2px;
+}
+
+.quickway_text a.btn_recall {
+    background: url(../images/formImages/selecte/btn_recall.png) no-repeat 0 0;
+    width: 69px;
+    height: 23px;
+    display: inline-block
+}
+
+.quickway_text ul {
+    margin: 0;
+    padding: 5px 0;
+    list-style: none;
+    width: 300px;
+    position: absolute;
+    border: 1px solid #f8999b;
+    right: 0;
+    background: #ffefef;
+    display: none;
+    z-index: 100;
+    *+top: 22px
+}
+
+.quickway_text:hover ul {
+    display: block
+}
+
+.quickway_text li {
+    margin: 0;
+    list-style: none;
+    line-height: 22px;
+    font-size: 12px;
+    padding: 0 22px 0 20px;
+    position: relative;
+    word-break: break-all;
+    word-wrap: break-word
+}
+
+.quickway_text li.quickwaytext_txt:hover {
+    color: #FFF;
+    background: #fe2e33
+}
+
+.quickway_text li.quickwaytext_txt a.blue_close {
+    background: url(../images/formImages/selecte/blue_close.png) no-repeat;
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    display: none
+}
+
+.quickway_text li.quickwaytext_txt:hover a.blue_close {
+    display: block
+}
+
+.quickway_text li a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-left: 5px
+}
+
+
+/*流程名下拉样式*/
+
+.selectDivTree a.uicSelectMore {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    background: url(../images/formImages/selecte/ms_ico2.png) no-repeat 1px 0;
+    display: block;
+    right: 0;
+    top: 0px;
+    *+right: 22px;
+    *+top: 1px;
+}
+
+.selectDivTree .uicSelectInp {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #CCC;
+    background: #FFF;
+    height: 20px;
+    padding: 0 5px;
+}
+
+.selectDivTree {
+    display: inline-block;
+    position: relative;
+    height: 22px;
+    text-align: left;
+    line-height: 22px;
+}
+
+.selectDivTree .uicSelectData p {
+    height: auto;
+    border-bottom: 1px dotted #CCCCCC;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    word-spacing: 6px;
+}
+
+.selectDivTree a {
+    color: #0069CA;
+    cursor: pointer;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.selectDivTree a:hover {
+    color: #FF6600;
+}
+
+.selectDivTree .uicSelectData {
+    border: 1px solid #D4D4D4;
+    border-radius: 0;
+    box-shadow: none;
+    background: #FFF;
+    position: absolute;
+    z-index: 9999;
+    min-height: 50px;
+    padding: 6px 10px;
+    display: none;
+    height: auto;
+    *+left: 0;
+    *+top: 22px;
+}
+
+.uicSubSelectMore {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    background: url(../images/formImages/selecte/ms_ico2.png) no-repeat 1px 0;
+    display: block;
+    right: 0;
+    top: 0px;
+    *+right: 112px;
+    *+top: 1px;
+}
+
+.uicSubSelectData p {
+    height: auto;
+    border-bottom: 1px dotted #CCCCCC;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+    word-spacing: 6px;
+}
+
+.uicSubSelectData p span {
+    color: #0069CA;
+    cursor: pointer;
+    padding-right: 15px;
+    padding-top: 5px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.uicSubSelectData {
+    border: 1px solid #D4D4D4;
+    border-radius: 0;
+    box-shadow: none;
+    background: #FFF;
+    position: absolute;
+    z-index: 9999;
+    min-height: 50px;
+    padding: 6px 10px;
+    display: none;
+    height: auto;
+}
+
+
+/*模糊查询样式*/
+
+.searchtypeDiv .searchtypeMore {
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    right: 0px;
+    border: 1px solid #ccc;
+    background: url(../images/search.png) no-repeat 3px 2px;
+    *top: 1px;
+    background-size: 25px 25px;
+}
+
+.searchtypeDiv .loading {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 17px;
+    width: 17px;
+    background: url("../../../plugins/jquery-easyui-1.3.3/themes/black/images/loading.gif") no-repeat 2px 1px;
+}
+
+.searchtypeDiv .pageDiv {
+    position: absolute;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    font-size: 12px;
+    border: 1px solid rgb(212, 212, 212);
+    display: none;
+}
+
+.searchtypeDiv .pageDiv .page {
+    float: left;
+    line-height: 25px;
+}
+
+.searchtypeDiv .pageDiv .prev {
+    float: left;
+    margin-left: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #5F9EA0;
+    -moz-user-select: none;
+    line-height: 25px;
+}
+
+.searchtypeDiv .pageDiv .next {
+    float: right;
+    margin-right: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #5F9EA0;
+    -moz-user-select: none;
+    line-height: 25px;
+}
+
+.searchtypeDiv .pageDiv .disabled {
+    cursor: not-allowed;
+    color: #BBBBBB;
+    font-weight: normal;
+}

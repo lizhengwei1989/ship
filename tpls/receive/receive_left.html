@@ -1,0 +1,36 @@
+<div class="uflow5_indexleft">
+    <!-- 搜索条 -->
+    <p class="leftsearch" style="display: none;">
+        <input id="searchBox" class="grey" type="text" name="" value="按标题、编号搜索">
+        <a id="searchBox_button" href="javascript:void(0);" class="search_icon"></a>
+    </p>
+    <div id="searchTip" style="top:36px;left:5px; width:250px; display:none;z-index:200;word-break:break-all" class="auto_match">
+        <ul>
+            <li name="title" class="condition">
+                <b>标题：</b>
+                <font></font>
+            </li>
+            <li name="key" class="condition">
+                <b>编号：</b>
+                <font></font>
+            </li>
+            <span class="separation"></span>
+            <li name="">
+                <b>高级搜索</b>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧菜单 -->
+    <ul class="leftmenu">
+        <img class="markedImg" src="images/repic.png">
+        <li class="uplusmenu" ui-sref-active="sel">
+            <a data-ui-sref="main.receive.new" actionname="新建收货单">
+                <i class="fa"></i>&nbsp;&nbsp;新建收货单</a>
+        </li>
+        <li class="uplusmenu" ui-sref-active="sel">
+            <a ui-sref="main.receive.check" actionname="收货单查询">
+                <i class="fa"></i>&nbsp;&nbsp;收货单查询
+            </a>
+        </li>
+    </ul>
+</div>

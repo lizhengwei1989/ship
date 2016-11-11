@@ -1,0 +1,1069 @@
+@charset "UTF-8";
+.tableTips {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: auto;
+    top: auto;
+    color: #000;
+    font-size: 12px;
+    z-index: 988
+}
+
+.tableTips span {
+    width: auto;
+    height: auto;
+    padding: 2px 5px;
+    background: #ffffb0;
+    opacity: 0.9;
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px #000;
+}
+
+body {
+    width: auto;
+}
+
+.ultrapower-table-box {
+    width: auto;
+    height: auto;
+    display: block;
+    /*border:solid 1px #CCC;*/
+    border-radius: 3px;
+    overflow: visible;
+    font-family: "微乳雅黑";
+}
+
+.ultrapower-table-box .title {
+    width: 100%;
+    height: 22px;
+    border-bottom: solid 1px #CCC;
+    background: #f1f1f1;
+    display: block;
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: middle;
+    font-weight: normal;
+    text-indent: 10px;
+    border-radius: 3px 3px 0px 0px
+}
+
+.ultrapower-table-box .operation {
+    width: 100%;
+    height: 30px;
+    border-bottom: solid 1px #CCC;
+    position: relative;
+    text-align: left;
+    z-index: 200
+}
+
+
+/*琛ㄦ牸鎸夐挳*/
+
+.buttons {
+    width: 570px;
+    height: 22px;
+    margin: 0 10px;
+    padding: 4px 0;
+    vertical-align: middle
+}
+
+.ultrapower-table-box .operation .buttons a {
+    height: 20px;
+    font-size: 12px;
+    line-height: 21px;
+    vertical-align: middle;
+    color: #666;
+    text-decoration: none;
+    cursor: default;
+    background: #FFF;
+    border-radius: 3px;
+    display: block
+}
+
+.ultrapower-table-box .operation .buttons a {
+    margin-right: 7px;
+    width: auto;
+    padding: 0 10px 0 10px;
+    border: solid 1px #e4e4e4;
+    float: left;
+    /*璁剧疆鍥炬爣*/
+}
+
+.ultrapower-table-box .operation .buttons a.mod {
+    width: auto;
+    margin-right: 10px;
+    padding: 0 10px 0 10px;
+    border: solid 1px #e4e4e4;
+    float: left;
+    /*璁剧疆鍥炬爣*/
+}
+
+.ultrapower-table-box .operation .buttons a.del {
+    width: auto;
+    margin-right: 10px;
+    padding: 0 10px 0 10px;
+    border: solid 1px #e4e4e4;
+    float: left;
+    /*璁剧疆鍥炬爣*/
+}
+
+.ultrapower-table-box .operation .buttons a:hover {
+    border: solid 1px #cccccc;
+    background: #E6EDF3;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 1px #FFF inset
+}
+
+.ultrapower-table-box .operation .buttons a.doMod {
+    border: solid 1px #90d52d;
+    background: #e7f2d0;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 1px #FFF inset
+}
+
+.ultrapower-table-box .operation .buttons a.doDel {
+    border: solid 1px #f58a6e;
+    background: #ffccbf;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 1px #FFF inset
+}
+
+.ultrapower-table-box .operation .buttons .more {
+    width: auto;
+    height: 20px;
+    border: solid 1px #e4e4e4;
+    float: left;
+    border-radius: 3px
+}
+
+.ultrapower-table-box .operation .buttons .moresel {
+    border: solid 1px #a4a4a4;
+    border-bottom: solid 1px #FFF;
+    border-radius: 3px 3px 0 0;
+    background: #FFF;
+    position: relative;
+    z-index: 210
+}
+
+.ultrapower-table-box .operation .buttons .more span {
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 21px;
+    vertical-align: middle;
+    color: #666;
+    cursor: pointer;
+    background: #FFF;
+    position: relative;
+    z-index: 230;
+    display: block;
+    height: 20px;
+    border-radius: 3px
+}
+
+.ultrapower-table-box .operation .buttons .moresel ul.moreLists {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: solid 1px #a4a4a4;
+    background: #FFF;
+    position: absolute;
+    left: -1px;
+    top: 19px;
+    z-index: 220;
+    border-radius: 0 3px 3px 3px;
+    overflow: hidden;
+    *+width: 190px
+}
+
+.ultrapower-table-box .operation .buttons .moresel ul.moreLists li {
+    width: auto;
+    height: auto;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.ultrapower-table-box .operation .buttons .moresel ul.moreLists li a {
+    margin: 2px 0;
+    display: block;
+    width: auto;
+    height: 20px;
+    padding: 0 5px 0 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    border: solid 1px transparent;
+}
+
+.ultrapower-table-box .operation .buttons .moresel ul.moreLists li a:hover {
+    border: solid 1px #cccccc;
+    background: #E6EDF3;
+    color: #333
+}
+
+
+/*琛ㄦ牸鎼滅储*/
+
+.ultrapower-table-box .operation .searchs {
+    width: auto;
+    height: 22px;
+    border-right: none;
+    float: left;
+    margin: 0 10px;
+    padding: 4px 0;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 210
+}
+
+.ultrapower-table-box .operation .searchs label {
+    font-size: 14px;
+    color: #666;
+    float: left;
+    line-height: 22px;
+    vertical-align: middle;
+    margin-right: 2px
+}
+
+.ultrapower-table-box .operation .searchs input {
+    outline: none;
+}
+
+.ultrapower-table-box .operation .searchs input.text {
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+    border-right: none;
+    border-top: solid 1px #cccccc;
+    border-bottom: solid 1px #cccccc;
+    border-left: solid 1px #cccccc;
+    background: #FFF;
+    float: left;
+    font-size: 12px;
+    color: #999;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px 0 0 3px
+}
+
+.ultrapower-table-box .operation .searchs input.datetime {
+    width: 90px;
+    height: 20px;
+    border: solid 1px #cccccc;
+    background: #FFF;
+    float: left;
+    font-size: 12px;
+    color: #999;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    cursor: default;
+}
+
+.ultrapower-table-box .operation .searchs span {
+    float: left;
+    color: #333333;
+    font-size: 12px;
+    padding: 0 5px;
+    line-height: 20px;
+    vertical-align: middle
+}
+
+.ultrapower-table-box .operation .searchs a.doSearch {
+    width: auto;
+    padding: 0 10px;
+    height: 20px;
+    border-left: none;
+    border-top: solid 1px #cccccc;
+    border-bottom: solid 1px #cccccc;
+    border-right: solid 1px #cccccc;
+    display: block;
+    float: left;
+    background: url(/uflow/styles/excellenceblue/images/search.png);
+    background-repeat: no-repeat;
+    color: #cccccc;
+    text-decoration: none;
+    line-height: 20px;
+    vertical-align: middle;
+    border-radius: 0px 3px 3px 0px
+}
+
+.ultrapower-table-box .operation .searchs a.doDelete {
+    width: auto;
+    padding: 0 10px;
+    height: 20px;
+    border-left: none;
+    border-top: solid 1px #cccccc;
+    border-bottom: solid 1px #cccccc;
+    border-right: none;
+    display: block;
+    float: left;
+    background: #FFF;
+    background-repeat: no-repeat;
+    color: #cccccc;
+    text-decoration: none;
+    line-height: 20px;
+    vertical-align: middle;
+    border-radius: 0px 3px 3px 0px
+}
+
+
+/*.ultrapower-table-box .operation .searchs a.doSearch:hover { background:#E6EDF3; color:#333}*/
+
+.ultrapower-table-box .operation .searchs a.doSelect {
+    width: auto;
+    padding: 0 10px;
+    height: 20px;
+    font-size: 12px;
+    display: block;
+    float: left;
+    border: solid 1px #cccccc;
+    background: #FFF;
+    color: #cccccc;
+    text-decoration: none;
+    line-height: 20px;
+    vertical-align: middle;
+    border-radius: 3px;
+    margin-left: 5px
+}
+
+.ultrapower-table-box .operation .searchs a.doSelect:hover {
+    background: #E6EDF3;
+    color: #333
+}
+
+.ultrapower-table-box .operation .searchs .doAdvancedSearch {
+    width: 20px;
+    height: 20px;
+    float: left;
+    display: block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    line-height: 20px;
+    vertical-align: middle;
+    border: solid 1px #cccccc;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer
+}
+
+.ultrapower-table-box .operation .searchs .doAdvancedSearch:hover {
+    background: #E6EDF3;
+    color: #333
+}
+
+.ultrapower-table-box .operation .advancedSearch {
+    width: 90%;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    border: solid 1px #CCCCCC;
+    border-top: solid 1px #F9F9F9;
+    margin-left: -45%;
+    overflow: visible;
+    border-radius: 0 0 3px 3px;
+    z-index: 230
+}
+
+.ultrapower-table-box .operation .advancedSearch .advancedSearchBg {
+    width: 100%;
+    height: 100%;
+    background: #F9F9F9;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.ultrapower-table-box .showbody {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    overflow: auto;
+    position: relative;
+    z-index: 100
+}
+
+.ultrapower-table-box .showbody .lodingTable {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+.ultrapower-table-box .showbody .lodingTable .scale {
+    width: 0;
+    height: 4px;
+    font-size: 0;
+    background: #cccccc;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 2px 0 2px #006
+}
+
+.ultrapower-table-box .showbody .lodingTable span {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #666666
+}
+
+.ultrapower-table-box .showbody .showTable {
+    width: 100%;
+    height: auto;
+    color: #333;
+    font-size: 12px;
+}
+
+.ultrapower-table-box .showTable input[type="checkbox"] {
+    float: left;
+    margin-top: 3px
+}
+
+
+/*.ultrapower-table-box .showTable .sort{ padding: 0 10px; background: url("../images/table/icon-sort.png") no-repeat right center; cursor: pointer}*/
+
+.ultrapower-table-box .showTable .sort_up {
+    padding: 0 10px;
+    background: url("../images/table/icon-sort-up.png") no-repeat right center;
+    cursor: pointer
+}
+
+.ultrapower-table-box .showTable .sort_down {
+    padding: 0 10px;
+    background: url("../images/table/icon-sort-down.png") no-repeat right center;
+    cursor: pointer
+}
+
+
+/*.ultrapower-table-box .showTable td { width:auto; height:auto;word-break: break-all;white-space:nowrap; border-bottom: #ccc 1px solid}*/
+
+.ultrapower-table-box .showTable td.tdLast {
+    border-right: #ccc 0 solid;
+}
+
+
+/*.ultrapower-table-box .showTable td div {width:20px; height:24px; padding: 2px 5px; overflow:hidden; text-overflow:ellipsis; font-size:12px; white-space:nowrap; text-align:center; vertical-align:middle; line-height:24px;word-break:break-all;word-wrap:keep-all;}*/
+
+.ultrapower-table-box .showTable .content_head td div {
+    background: #e4e4e4
+}
+
+.ultrapower-table-box .showTable .content_head b {
+    padding-left: 8px;
+    float: left;
+}
+
+.ultrapower-table-box .showTable .content_head s {
+    float: left;
+    display: inline-block;
+    *+display: inline;
+    *+zoom: 1;
+}
+
+.ultrapower-table-box .showTable .content_head .table-add {
+    background: url("../images/table/table-closeed.png") no-repeat center center;
+    width: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.ultrapower-table-box .showTable .content_head .table-del {
+    background: url("../images/table/table-opened.png") no-repeat center center;
+    width: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.ultrapower-table-box .showTable td div.tl {
+    text-align: left
+}
+
+.ultrapower-table-box .showTable td div.tr {
+    text-align: right
+}
+
+.ultrapower-table-box .showTable td div.tc {
+    text-align: center
+}
+
+.ultrapower-table-box .showTable td div.col_content {
+    height: auto
+}
+
+.ultrapower-table-box .showTable td div span a {
+    color: #333;
+    text-decoration: none
+}
+
+.ultrapower-table-box .showTable td div span a:hover {
+    color: #03F;
+    text-decoration: underline
+}
+
+.ultrapower-table-box .showTable .gary td {
+    background: #fafafa
+}
+
+.ultrapower-table-box .showTable .selected td {
+    background: #0a7fc8;
+    color: #fff
+}
+
+.ultrapower-table-box .showTable .trhover td {
+    background: #E6EDF3
+}
+
+.ultrapower-table-box .showTable .trclick {
+    background: url("../images/table/icon_trselect.png") no-repeat left top
+}
+
+.ultrapower-table-box .showTable .trclick td {
+    background: #fdfdc0;
+    border-bottom: solid 1px #ead483
+}
+
+.ultrapower-table-box .showTable .editing {
+    width: 88px;
+    border: #ccc 1px solid;
+    margin: 0;
+    color: #333
+}
+
+.ultrapower-table-box .showTable .icon_remarks {
+    background: url("../images/table/icon-remarks.png") no-repeat right top
+}
+
+
+/*鍐呭琛ㄦ牸*/
+
+.ultrapower-table-box .showTable .content_table td {
+    border: 0;
+    text-align: left;
+    padding-right: 20px
+}
+
+.ultrapower-table-box .showTable .content_form td {
+    border: 0;
+    text-align: left;
+    padding-right: 20px
+}
+
+.ultrapower-table-box .showTable .content_form b {
+    width: 80px;
+    display: inline-block;
+    text-align: right
+}
+
+.ultrapower-table-box .showTable .content_form input {
+    border: #ccc 1px solid
+}
+
+.ultrapower-table-box .showTable .uicidentify {
+    background-image: url('../images/table/icon-edited.gif');
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+}
+
+.content_form_save,
+.content_form_cancel {
+    border: #ccc 1px solid;
+    color: #333;
+    text-decoration: none;
+    padding: 2px 20px;
+    border-radius: 2px;
+    margin: 0 5px;
+    box-shadow: 0 1px 1px #fff inset;
+    background: #ebebeb;
+    background: -moz-linear-gradient(top, #f6f6f6, #e7e7e7);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f6f6f6), to(#e7e7e7));
+}
+
+
+/*鍥炬爣*/
+
+.icon_closeed {
+    background: url("../images/table/table-closeed.png") no-repeat center;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 4px
+}
+
+.icon_opened {
+    background: url("../images/table/table-opened.png") no-repeat center;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 4px
+}
+
+.icon_file {
+    background: url("../images/table/icon-file.png") no-repeat center;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px
+}
+
+.icon_node {
+    background: url("../images/table/table-noth.png") no-repeat center;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px;
+    margin-left: 20px
+}
+
+.icon_add {
+    background: url("../images/table/table-add.png") no-repeat center;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px;
+    margin-left: 15px
+}
+
+.icon_edit {
+    background: url("../images/table/table-edit.png") no-repeat center;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px
+}
+
+.icon_del {
+    background: url("../images/table/table-del.png") no-repeat center;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px
+}
+
+
+/*琛ㄦ牸鍚戝*/
+
+.ultrapower-table-box .showTable td div.guide {
+    height: 23px;
+    text-align: left;
+    padding-top: 3px;
+    box-shadow: 0 1px 1px #fff inset;
+    background: #ebebeb;
+    background: -moz-linear-gradient(top, #f6f6f6, #e7e7e7);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f6f6f6), to(#e7e7e7));
+    *+filter: progid: DXImageTransform.Microsoft.gradient(startcolorstr=#f6f6f6, endcolorstr=#e7e7e7, gradientType=0);
+}
+
+.ultrapower-table-box .showTable td div.guide input {
+    width: 30px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.ultrapower-table-box .showTable td .uicinp {
+    display: none;
+}
+
+.ultrapower-table-box .showTable td .uicdate {
+    display: none;
+    margin: 0;
+    float: left;
+}
+
+.ultrapower-table-box .showTable td .uicselect {
+    display: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    border-width: 1px;
+}
+
+.ultrapower-table-box .showTable td .selectbut {
+    float: right;
+    margin-right: 2px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    background: url(../images/table/selectbut.png) no-repeat center left;
+}
+
+.ultrapower-table-box .showTable td .selectConent {
+    padding: 0;
+    margin: 0;
+    margin-left: -3px;
+    display: none;
+    position: absolute;
+    top: 22px;
+    left: 5px;
+    height: auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    min-width: 130px;
+    z-index: 9999
+}
+
+.ultrapower-table-box .showTable td .selectClickCon {
+    padding: 0;
+    margin: 0;
+    display: none;
+    height: 100%;
+    position: relative;
+    overflow: visible!important;
+}
+
+.ultrapower-table-box .showTable td li {
+    list-style-type: none;
+    padding-left: 10px;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+}
+
+.ultrapower-table-box .selectUl li:last-child {
+    border-bottom: 0;
+}
+
+.ultrapower-table-box .showTable td li:hover {
+    list-style-type: none;
+    padding-left: 10px;
+    background-color: RGB(57, 157, 255);
+    cursor: pointer;
+    color: #FFF;
+}
+
+.ultrapower-table-box .showTable td .lichecked {
+    color: #000;
+}
+
+.ultrapower-table-box .showTable td .selectConent .selectUl {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.ultrapower-table-box .pages {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    position: relative;
+    margin-top: 10px;
+}
+
+.ultrapower-table-box .pages ul.pageUl {
+    margin: 3px 0;
+    width: 100%;
+    height: 22px;
+    padding: 0;
+    text-align: center;
+}
+
+.ultrapower-table-box .pages ul.pageUl ul {
+    width: 100%;
+    height: 22px;
+    padding: 0;
+    clear: both;
+    text-align: center
+}
+
+.ultrapower-table-box .pages ul.pageUl li {
+    list-style: none;
+    display: inline;
+    visibility: visible;
+    width: auto;
+    height: auto;
+    margin: 0 5px 0 0;
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center
+}
+
+.ultrapower-table-box .pages ul.pageUl li label {
+    width: 60px;
+    height: 20px;
+    font-size: 12px;
+    font-family: Arial;
+    color: #3D63A4;
+    display: inline-block;
+    border: solid 1px #cccccc;
+    text-decoration: none;
+    border-radius: 0;
+    cursor: pointer;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ultrapower-table-box .pages ul.pageUl li label.pageDisabled {
+    cursor: default;
+    background: none repeat scroll 0 0 #f1f1f1;
+    border: 1px solid #CCCCCC
+}
+
+.ultrapower-table-box .pages ul.pageUl li div {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    *+display: inline;
+    *+zoom: 1
+}
+
+.ultrapower-table-box .pages ul.pageUl ul li a {
+    min-width: 20px;
+    width: auto;
+    height: 20px;
+    font-size: 12px;
+    font-family: Arial;
+    color: #3D63A4;
+    display: inline-block;
+    border: solid 1px #CCC;
+    ;
+    text-decoration: none;
+    border-radius: 0;
+    cursor: pointer;
+    line-height: 20px;
+    vertical-align: middle;
+    margin: 0;
+    margin-top: -2px;
+    *+margin-top: 0;
+}
+
+.ultrapower-table-box .pages ul.pageUl ul li a:hover {
+    text-decoration: underline
+}
+
+.ultrapower-table-box .pages ul.pageUl ul li span {
+    min-width: 20px;
+    width: auto;
+    height: 20px;
+    font-size: 12px;
+    font-family: Arial;
+    color: #FFF;
+    font-weight: bold;
+    display: inline-block;
+    border: solid 1px #1a88d2;
+    text-decoration: none;
+    border-radius: 0;
+    cursor: pointer;
+    line-height: 20px;
+    vertical-align: middle;
+    background: #1a88d2;
+    margin-top: -2px;
+    *+margin-top: 0;
+}
+
+
+/*琛ㄦ牸鏇村*/
+
+.ultrapower-table-box .mores {
+    width: 100%;
+    height: auto
+}
+
+.ultrapower-table-box .mores a {
+    width: auto;
+    height: 30px;
+    display: block;
+    background: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    line-height: 30px;
+    vertical-align: middle;
+    text-decoration: none;
+    border: solid 1px #cccccc;
+}
+
+.ultrapower-table-box .mores a:hover {
+    border: solid 1px #cccccc;
+    background: #E6EDF3
+}
+
+
+/*琛ㄦ牸缈婚〉*/
+
+.ultrapower-table-box .paging_box p {
+    float: right;
+    margin: 0;
+}
+
+.ultrapower-table-box .paging_box em {
+    font-style: normal;
+    padding: 0 5px
+}
+
+.ultrapower-table-box .paging_box {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
+    color: #333333;
+    font-weight: normal;
+    line-height: 24px;
+    height: 25px;
+    vertical-align: middle;
+    border-right: #ccc 1px solid;
+    box-shadow: 0 1px 1px #fff inset;
+    background: #ebebeb;
+    background: -moz-linear-gradient(top, #f6f6f6, #e7e7e7);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f6f6f6), to(#e7e7e7));
+    *+filter: progid: DXImageTransform.Microsoft.gradient(startcolorstr=#f6f6f6, endcolorstr=#e7e7e7, gradientType=0);
+}
+
+.ultrapower-table-box .paging {
+    float: right;
+    margin: 2px 0
+}
+
+.ultrapower-table-box .paging li {
+    float: left;
+    list-style: none
+}
+
+.ultrapower-table-box .paging .paging_frist,
+.ultrapower-table-box .paging .paging_last,
+.ultrapower-table-box .paging .paging_pre,
+.ultrapower-table-box .paging .paging_next {
+    width: 16px;
+    height: 16px;
+    padding: 2px
+}
+
+.ultrapower-table-box .paging .paging_count {
+    width: 80px;
+    height: 20px;
+    border-left: #ffffff 1px solid;
+    border-right: #cccccc 1px solid;
+    text-align: center;
+    line-height: 20px
+}
+
+.ultrapower-table-box .paging a {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url("../images/table/table-paging.png");
+    background-repeat: no-repeat;
+}
+
+.ultrapower-table-box .paging .paging_pre {
+    padding-right: 10px;
+    border-right: #cccccc 1px solid
+}
+
+.ultrapower-table-box .paging .paging_next {
+    padding-left: 10px;
+    border-left: #ffffff 1px solid
+}
+
+.ultrapower-table-box .paging_frist a {
+    background-position: 0 0
+}
+
+.ultrapower-table-box .paging_last a {
+    background-position: -145px 0
+}
+
+.ultrapower-table-box .paging_pre a {
+    background-position: -22px 0
+}
+
+.ultrapower-table-box .paging_next a {
+    background-position: -123px 0
+}
+
+.ultrapower-table-box .mores a {
+    width: auto;
+    height: 30px;
+    display: block;
+    background: #ffffff;
+    font-size: 14px;
+    font-family: "微乳雅黑";
+    text-align: center;
+    color: #333;
+    line-height: 30px;
+    vertical-align: middle;
+    text-decoration: none;
+    border: solid 1px #0099FF;
+}
+
+.ultrapower-table-box .mores a:hover {
+    border: solid 1px #0099FF;
+    background: #E6EDF3
+}
+
+.ultrapower-table-box .operation .buttons .more a {
+    clear: both;
+}
+
+.ultrapower-table-box .pages span.bottomBut {
+    clear: both;
+    float: left;
+    margin: 0;
+}
+
+.ultrapower-table-box .pages ul.bottomUl {
+    margin: 0;
+    width: auto;
+    height: 22px;
+    padding: 0;
+    text-align: right;
+    float: right;
+}
+
+.ultrapower-table-box .pages span.bottomBut a {
+    border: 1px solid #E4E4E4;
+    float: left;
+    margin-right: 10px;
+    padding: 0 10px;
+    width: auto;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 3px;
+    color: #666666;
+    display: block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 21px;
+    text-decoration: none;
+    vertical-align: middle
+}
+
+.icon_export {
+    background: url("../images/table/export.png") no-repeat center !important;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px
+}
+
+.ultrapower-table-box .pages span.bottomBut a:hover {
+    background: none repeat scroll 0 0 #E6EDF3;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 0 1px #FFFFFF inset;
+    color: #333333;
+    cursor: pointer;
+}
+
+
+/*琛ㄦ牸鎿嶄綔*/
+
+.showTable .codeSpan .operation {
+    color: #3300ff
+}

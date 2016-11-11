@@ -1,0 +1,396 @@
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/ui-bootstrap-csp.css">
+<style type="text/css">
+a {
+    color: #333;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    margin-bottom: 0;
+}
+</style>
+<div class="uflow5_indexright_box">
+    <div class="right_div_head">收货 &gt; 收货单查询</div>
+    <div class="uflow5_indexright">
+        <title>收货单查询</title>
+        <div class="sd_receivingNote_uic" cellpadding="0" cellspacing="0" border="0">
+            <div class="ultrapower-table-box">
+                <div class="showbody" style="min-height: 450px;">
+                    <div class="advancedSearch">
+                        <ul class="clearfix">
+                            <li class="advancedSearch_li" style="position: relative; z-index: 298;">
+                                <label class="editableLabel">订单编号：</label>
+                                <input name="" type="text" class="InpText f12" maxlength="256" style="width: 246px;" ng-keyup="myKeyup($event)" id="searcode">
+                            </li>
+                            <li class="advancedSearch_li uic_form_date" style="position: relative; z-index: 600;">
+                                <label class="authoritylab  editableLabel">创建时间：</label>
+                                <div class="selectDiv" style="width:250px;">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dat" is-open="popup1.opened" ng-required="true" close-text="关闭" 30 clear-text="清空" current-text="今天" alt-input-formats="altInputFormats" id="createTime"/>
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="open1()">
+                                                    <i class="glyphicon glyphicon-calendar">时间</i>
+                                                <tton>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                            </li>
+                            <li class="advancedSearch_li uic_form_select" style="position: relative; z-index: 500;">
+                               <label for="receiver" class="editableLabel">收货方：</label>
+                               <div class="selectDiv">
+                                   <input id="receiver" name="receiver" type="text" class="InpText f12" maxlength="256" style="width: 246px;" ng-keyup="reKeyup($event)">
+                                   <div class="uicSelectData" style="max-height:254px;width:256px;z-index:999" ng-show="receBox" id="recebox">
+                                       <ul>
+                                           <li class="tip" ng-repeat="i in receiverList">
+                                               <i ng-bind="i.clientName" ng-click="recebtn(i)"></i>
+                                           </li>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </li>
+                           <!-- <li class="advancedSearch_li uic_form_select" style="position: relative; z-index: 300;">
+                                <label class="authoritylab  editableLabel" for="lineId">线路：</label>
+                                <div class="selectDiv">
+                                    <input name="lineId" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" infinityid="">
+                                    <a class="uicSelectMore" href="javascript:void(0);"></a>
+                                    <div class="uicSelectData" style="max-height:254px;width:256px">
+                                        <ul>
+                                            <li infinityname="姚桥 东区" infinityid="148">
+                                                <i>姚桥 东区</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li> -->
+                            
+                           <li class="advancedSearch_li uic_form_select" style="position: relative; z-index: 500;">
+                               <label for="sender" class="editableLabel">发货方：</label>
+                               <div class="selectDiv">
+                                   <input id="sender" name="sender" type="text" class="InpText f12" maxlength="256" style="width: 246px;" ng-keyup="seKeyup($event)">
+                                   <div class="uicSelectData" style="max-height:254px;width:256px;z-index:999" ng-show="senBox" id="senbox">
+                                       <ul>
+                                           <li class="tip" ng-repeat="i in senderList">
+                                               <i ng-bind="i.clientName" ng-click="senbtn(i)"></i>
+                                           </li>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </li>
+                            <li class="advancedSearch_li uic_form_select" style="position: relative; z-index: 300;">
+                                <label class="authoritylab  editableLabel" for="lineId">线路：</label>
+                                <div class="selectDiv">
+                                    <input name="lineId" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" infinityid="" id="lineId">
+                                    <a class="uicSelectMore" href="javascript:void(0);" id="lineser" ng-click="lineser()"></a>
+                                    <div class="uicSelectData" style="max-height:254px;width:256px" id="linebox" ng-show="lineBox">
+                                        <ul>
+                                            <li class="tip" ng-repeat="i in lineList">
+                                               <i ng-bind="i.lineName" ng-click="lineBtn(i)"></i>
+                                           </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="advancedSearch_li uic_form_select" style="position: relative; z-index: 300;">
+                                <label class="authoritylab  editableLabel">状态：</label>
+                                <div class="selectDiv">
+                                    <input name="" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" infinityid="" id="stateVal">
+                                    <a class="uicSelectMore" href="javascript:void(0);" ng-click="stateBtn()"></a>
+                                    <div class="uicSelectData" style="max-height:254px;width:256px" id="statebox" ng-show="stateBox">
+                                        <ul>
+                                            <li infinityname="未收货" infinityid="0">
+                                                <i>未收货</i>
+                                            </li>
+                                            <li infinityname="已收货" infinityid="1">
+                                                <i>已收货</i>
+                                            </li>
+											<li infinityname="已派车" infinityid="2">
+                                                <i>已派车</i>
+                                            </li>
+											<li infinityname="已装车" infinityid="3">
+                                                <i>已装车</i>
+                                            </li>
+											<li infinityname="配送中" infinityid="4">
+                                                <i>配送中</i>
+                                            </li>
+											<li infinityname="已签收" infinityid="5">
+                                                <i>已签收</i>
+                                            </li>
+											<li infinityname="拒签" infinityid="6">
+                                                <i>拒签</i>
+                                            </li>
+											<li infinityname="二次配送" infinityid="7">
+                                                <i>二次配送</i>
+                                            </li>
+											<li infinityname="已取消" infinityid="8">
+                                                <i>已取消</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="advancedSearch_li uic_form_select" style="position: relative; z-index: 299;">
+                                <label class="authoritylab  editableLabel" for="lineSnId">班次：</label>
+                                <div class="selectDiv">
+                                    <input name="" readonly="true" style="width:246px" class="authorityInp uicSelectInp" value="" infinityid="" id="linetime">
+                                    <a class="uicSelectMore" href="javascript:void(0);" ng-click="runtimeBtn()"></a>
+                                    <div class="uicSelectData" style="max-height:254px;width:256px"id="runtimeBox" ng-show="runtimebox">
+                                        <ul>
+											<li class="tip" ng-repeat="i in runtimeList">
+                                               <i ng-bind="i.runTime" ng-click="runsBtn(i)"></i>
+                                           </li>
+										</ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="advancedSearch_btn">
+                            <input id="advancedSearch_btn" class="submit" type="button" value="查询" ng-click="demand()">
+                            <input id="reset_btn" class="submit" type="button" value="重置">
+                            <input id="export_btn" class="submit" type="button" value="导出">
+                        </p>
+                    </div>
+                    <table class="showTable" cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                                <th>单号/收货日期</th>
+                                <th>发/收货方</th>
+                                <th>班次</th>
+                                <th>代收货款</th>
+                                <th>运费</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <a ui-sref="seeWaybill" href="javascript:;" target="_bank"><b class="blue02">SE000162016102300081</b></a>
+                                    </div>
+                                    <div>
+                                        <code>2016-10-23 16:02:38</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <strong class="receive_uic_sign">发</strong>
+                                        <code>道奇汽配</code>
+                                    </div>
+                                    <div>
+                                        <strong class="send_uic_sign">收</strong>
+                                        <code class="codeSpan">曙光汽修</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <code>西南长江路-16：30</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <strong class="receive_uic_sign">应</strong>
+                                        <code>270.00</code>
+                                    </div>
+                                    <div>
+                                        <strong class="send_uic_sign">实</strong>
+                                        <code>0.00</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <strong class="receive_uic_sign">应</strong>
+                                        <code>10</code>
+                                    </div>
+                                    <div>
+                                        <strong class="send_uic_sign">实</strong>
+                                        <code>0.00</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        未签收
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="backBtn" href="javascript:;" ng-click="cancelBtn()">取消</a>
+                                    <a class="backBtn" href="javascript:;" ng-click="bisectionBtn()">平帐</a>
+                                </td>
+                            </tr>
+                            <tr class="gary">
+                                <td>
+                                    <div>
+                                        <a ui-sref="seeWaybill" href="javascript:;" target="_bank"><b class="blue02">SE000162016102300080</b></a>
+                                    </div>
+                                    <div>
+                                        <code>2016-10-23 16:01:25</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <strong class="receive_uic_sign">发</strong>
+                                        <code>勤昌盛轴承</code>
+                                    </div>
+                                    <div>
+                                        <strong class="send_uic_sign">收</strong>
+                                        <code>郑州瑞信汽车修理有限</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <code>西南长江路-16：30</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <strong class="receive_uic_sign">应</strong>
+                                        <code>260.00</code>
+                                    </div>
+                                    <div>
+                                        <strong class="send_uic_sign">实</strong>
+                                        <code>0.00</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <strong class="receive_uic_sign">应</strong>
+                                        <code>10</code>
+                                    </div>
+                                    <div>
+                                        <strong class="send_uic_sign">实</strong>
+                                        <code>0.00</code>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        已签收
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="backBtn" href="javascript:;" ng-click="bisectionBtn()">平帐</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pages">
+                    <ul class="pageUl ">
+                        <li>
+                            <label class="fristPage" style="cursor:default;background:none repeat scroll 0 0 #F1F1F1;border:1px solid #CCCCCC">上一页</label>
+                        </li>
+                        <li>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <span>1</span></li>
+                                    <li>
+                                        <a href="javascript:;;">2</a></li>
+                                    <li>
+                                        <a href="javascript:;;">3</a></li>
+                                    <li>...</li>
+                                    <li>
+                                        <a href="javascript:;;">261</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="endPage">下一页</label>
+                        </li>
+                        <li>
+                            <em>共2603条数据</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 平账弹出框 -->
+<div id="dialog-recevieDialog_window" class="dialogbox" style="width: 100%;height:100%;z-index:999999;position:fixed;top:0;left:0;" ng-show="popUp">
+    <div class="dialogbg" style="width:100%; height: 100%; filter: Alpha(opacity=20); background: #000; opacity: 0.2"></div>
+    <dl class="incomingMsg">
+        <dd class="incomingTitle">
+            <span>呼入信息</span>
+            <i class="incomingNews fr" ng-click="bisectionCancel()">X</i>
+        </dd>
+        <dt class="incomingTel">
+            <span>发货单号:</span>
+            <b></b>
+        </dt>
+        <dt class="incomingName">
+            <span>平账对象:</span>
+            <input type="radio" name="objects"> 代收货款&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="objects"> 运费
+        </dt>
+        <dt style="position:relative;">
+            <div class="incomingadd"></div>
+        </dt>
+        <dt class="incomings">
+            <div class="incomingName">
+                <span>平账金额：</span>
+                <input type="text" name="">
+            </div>
+            <div class="incomingName">
+                <span>平账类型：</span>
+                <select>
+                    <option>请选择</option>
+                    <option>代收款多收</option>
+                    <option>代收款变更</option>
+                    <option>代收款未收</option>
+                    <option>结账欠款</option>
+                </select>
+            </div>
+        </dt>
+        <dt class="incomings">
+            <div class="incomingName">
+                <span>平账金额：</span>
+                <input type="text" name="">
+            </div>
+            <div class="incomingName">
+                <span>平账类型：</span>
+                <select>
+                    <option>请选择</option>
+                    <option>代收款多收</option>
+                    <option>代收款变更</option>
+                    <option>代收款未收</option>
+                    <option>结账欠款</option>
+                </select>
+            </div>
+        </dt>
+        <dt style="position:relative;">
+            <div class="incomingdel"></div>
+        </dt>
+        <dt class="incomingList">
+            <a>
+                <input type="button" value="提交" class="apply_call">
+            </a>
+            <input type="button" value="取消" class="cancel_call" ng-click="bisectionCancel()">
+        </dt>
+    </dl>
+</div>
+<!-- 取消弹出框 -->
+<div id="dialog-recevieDialog_window" class="dialogbox" style="width: 100%;height:100%;z-index:999999;position:fixed;top:0;left:0;" ng-show="cancel">
+    <div class="dialogbg" style="width:100%; height: 100%; filter: Alpha(opacity=20); background: #000; opacity: 0.2"></div>
+    <!-- 取消 -->
+    <div class="push">
+        <div class="push-tit clearfix">
+            <span class="fl">取消发货操作</span>
+            <i class="fr close"></i>
+        </div>
+        <div class="push-con">
+            <div class="select-two">
+                <span>是否确认取消</span>
+            </div>
+            <div class="submit-two">
+                <a href="javascript:;"><span class="queding">确定</span></a>
+                <a href="javascript:;"><span class="quxiao" ng-click="cancelCancel()">取消</span></a>
+            </div>
+        </div>
+    </div>
+</div>

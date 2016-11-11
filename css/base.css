@@ -1,0 +1,198 @@
+@CHARSET "UTF-8";
+body { padding:0; margin:0; font-size:12px; color:#333;}
+p,ul,ol,li,dl,dd,dt,form {padding:0; margin:0; list-style:none}
+img,a,fieldset,em,input[button]{ border:0; font-style:normal}
+h1,h2,h3,h4,h5,h6 { padding:0; margin:0; list-style:none}
+input[type=button]{ cursor:pointer}
+input[type=radio],select,textarea{ background:#FFF; }
+/*link*/
+/*a:link{color:#6767ff; text-decoration:underline}
+a:visited{color:#6767ff}
+a:hover{color:#6767ff; text-decoration:none}
+a:active{color:#6767ff;}*/
+a{ text-decoration:none;color: #333;}
+/*font*/
+.f12{font-size:12px}
+.f14{font-size:14px}
+.f16{font-size:16px}
+.f18{font-size:18px}
+.f20{font-size:20px}
+.f24{font-size:24px}
+.f30{font-size:30px}
+.fb{font-weight:bold}
+.fn{font-weight:normal}
+.t2{text-indent:2em}
+.unl{text-decoration:underline;}
+.no_unl{text-decoration:none;}
+.cp{cursor:pointer;}
+.oh{overflow:hidden;}
+/*font-family*/
+.fms{font-family:"宋体";}
+.fmh{font-family:"黑体";}
+.fmyh{font-family:"微软雅黑","宋体";}
+.fma{font-family:arial;}
+.fmab{font-family:arial black;}
+.fmg{font-family:Georgia,Tahoma,Arial}
+.fmvr{font-family:"微软雅黑","黑体";}
+/*position*/
+.tl{text-align:left}
+.tc{text-align:center}
+.tr{text-align:right}
+.bc{margin-left:auto;margin-right:auto;}
+.fl{float:left;display:inline}
+.fr{float:right;display:inline;margin-right:2px}
+.cb{clear:both}
+.cl{clear:left}
+.cr{clear:right}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block}* html .clearfix{height:1%;}.clearfix{display:block}
+.vm{vertical-align:middle}
+.vt{vertical-align:top}
+.vtimg img{vertical-align:top;}
+.pr{position:relative}
+.pa{position:absolute}
+.pf{position:fixed; z-index:10000}
+.abs-right{position:absolute;right:0}
+.zoom{zoom:1}
+.none{display:none}
+.di{display:inline;}
+.db{display:block;}
+.dib{display:inline-block;}
+/*width*/
+.w50{width:50px}
+.w60{width:60px}
+.w70{width:70px}
+.w80{width:80px}
+.w90{width:90px}
+.w100{width:100px}
+.w150{width:150px}
+.w200{width:200px}
+.w250{width:250px}
+.w300{width:300px}
+.w600{width:600px}
+.w960{width:960px}
+.w1000{width:1000px}
+.w{width:100%}
+.w1{width:10%}
+.w2{width:20%}
+.w3{width:30%}
+.w4{width:40%}
+.w5{width:50%}
+.w6{width:60%}
+.w7{width:70%}
+.w8{width:80%}
+.w9{width:90%}
+/*height-line-height*/
+.h20{height:20px;}
+.h22{height:22px;}
+.h24{height:24px;}
+.h26{height:26px;}
+.h28{height:28px;}
+.h30{height:30px;}
+.h40{height:40px;}
+.h50{height:50px;}
+.h80{height:80px;}
+.h100{height:100px;}
+.h{height:100%}
+.lh18{line-height:18px}
+.lh22{line-height:22px}
+.lh24{line-height:24px}
+.lh26{line-height:26px}
+.lh28{line-height:28px}
+.lh30{line-height:30px}
+.lh40{line-height:40px}
+/*margin*/
+.m10{margin:10px}
+.m15{margin:15px}
+.m20{margin:20px}
+.m30{margin:30px}
+.mt3{margin-top:3px;}
+.mt5{margin-top:5px}
+.mt10{margin-top:10px}
+.mt15{margin-top:15px}
+.mt20{margin-top:20px}
+.mt30{margin-top:30px}
+.mb5{margin-bottom:5px}
+.mb8{margin-bottom:8px}
+.mb10{margin-bottom:10px}
+.mb15{margin-bottom:15px}
+.mb20{margin-bottom:20px}
+.mb30{margin-bottom:30px}
+.ml5{margin-left:5px}
+.ml10{margin-left:10px}
+.ml15{margin-left:15px}
+.ml20{margin-left:20px}
+.ml30{margin-left:30px}
+.ml60{margin-left:60px}
+.mr5{margin-right:5px}
+.mr10{margin-right:10px}
+.mr15{margin-right:15px}
+.mr20{margin-right:20px}
+.mr30{margin-right:30px}
+.mr40{margin-right:40px}
+.nmt{ margin-top:0!important;}
+.nmb{ margin-bottom:0!important;}
+.nml{ margin-left:0!important;}
+.nmr{ margin-right:0!important;}
+/*padding*/
+.p5{padding:5px;}
+.p10{padding:10px;}
+.p15{padding:15px;}
+.p20{padding:20px;}
+.p30{padding:30px;}
+.pt5{padding-top:5px}
+.pt10{padding-top:10px}
+.pt15{padding-top:15px}
+.pt20{padding-top:20px}
+.pt30{padding-top:30px}
+.pb5{padding-bottom:5px}
+.pb10{padding-bottom:10px}
+.pb15{padding-bottom:15px}
+.pb20{padding-bottom:20px}
+.pb30{padding-bottom:30px}
+.pl5{padding-left:5px}
+.pl15{padding-left:10px}
+.pl20{padding-left:20px}
+.pl30{padding-left:30px}
+.pl40{padding-left:40px}
+.pr5{padding-right:5px}
+.pr10{padding-right:10px}
+.pr15{padding-right:15px}
+.pr20{padding-right:20px}
+.pr30{padding-right:30px}
+.plr10{padding-left:10px; padding-right:10px;}
+.plr20{padding-left:20px; padding-right:20px;}
+/*颜色*/
+.white{color:#FFF}
+.grey{color:#CCC}
+.grey01{color:#333}
+.grey02{ color:#666}
+.grey03{ color:#888}
+.grey04{ color:#999}
+.red{color:#F00}
+.blue{color:#0066cc}/*标准蓝*/
+.blue01{color:#365891}/*深蓝*/
+.blue02{color:#005EA7}/*用于列表操作的蓝*/
+.orange{ color:#F60}/*标准橙*/
+/*input*/
+input.bdred{border:1px solid #F00}
+/*border*/
+.border01{border:1px solid #d7d7d7}/*浅灰色边框 - 例如处理工单页边框*/
+.border02{border:1px solid #bbbbbb}/*深灰色边框*/
+.border03{border:1px solid #EFB62C}/*橙色边框*/
+.nbt{border-top:0!important}
+.nbb{ border-bottom:0!important}
+.nbl{border-left:0!important}
+.nbr{border-right:0!important}
+/*background-color*/
+.bg_white { background:#FFF;}/*白色背景*/
+.bg_grey { background:#fbfbfb}/*浅灰色背景*/
+.bg_orag{ background:#FFFDEE}/*浅橙色背景，例如一线处理信息块*/
+
+
+/*链接*/
+a.blue,a.blue:visited{ color:#0066cc; text-decoration:none}a.blue:hover{ text-decoration:underline;}
+/*清除IE10文本框的x按钮*/
+input::-ms-clear{display:none;}
+
+
